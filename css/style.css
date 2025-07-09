@@ -856,6 +856,40 @@ body {
 @media (max-width: 600px) {
   html { font-size: 81.25%; }
 
+    .sign_up {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    margin: 2rem 1rem !important;
+    padding: 0 !important;
+  }
+  .sign_left,
+  .sign_right {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 2rem 1rem !important;
+  }
+  /* if you have that negative top‐margin on the form, reset it */
+  .sign_form {
+    margin-top: 0 !important;
+  }
+
+  /* ----- Footer: column, centred, full-width children ----- */
+  .footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    padding: 1rem !important;
+    margin: 2rem 0 !important;
+  }
+  .footer--1,
+  .footer-quarter {
+    width: 100% !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
   .navigation__button{
     background: #D1FAE5;
     color: #0B9567;
