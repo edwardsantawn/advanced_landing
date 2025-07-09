@@ -793,7 +793,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    background: #fff;
+    background: transparent;
     z-index: 10001;    /* ← higher than almost anything */
   }
 
