@@ -1,7 +1,38 @@
 /* Uniform font size for section h1 headings (Lighthouse best practice) */
-.section-h1 {
+h1 {
   font-size: 2rem;
 }
+
+/* ─── improve contrast on search input ─── */
+.search__input {
+  /* make the typed text very dark against white */
+  color: #1F2937; /* ~17:1 contrast on #fff */
+}
+.search__input::placeholder {
+  /* deep-gray placeholder, ~4.5:1 on white */
+  color: #4B5563 !important;
+}
+
+/* ─── darken the “Contact Now” button ─── */
+.search__button {
+  background: #047857;       /* darker green, ~5.2:1 contrast with white text */
+  border-color: #047857;
+  color: #FFFFFF;            /* keep the text white */
+}
+.search__button:hover {
+  background: #065F46;       /* even darker on hover */
+  border-color: #065F46;
+}
+
+
+/* ensure every h1 in a section/article/… keeps a stable size */
+.section h1,
+.article h1,
+.nav h1,
+.aside h1 {
+  font-size: 2rem;
+}
+
 /* ===================== COOKIE BANNER ===================== */
 .cookie-banner {
   position: fixed;
@@ -25,8 +56,8 @@
 }
 
 .cookie-banner__icon {
-  width: 28px;
-  height: 28px;
+  width: 56px;
+  height: 56px;
   margin-right: 0.5rem;
   flex-shrink: 0;
 }
@@ -614,8 +645,8 @@ body {
 }
 
 .search__icon {
-  width: 28px;
-  height: 28px;
+  width: 56px;
+  height: 56px;
   margin-right: 1rem;
   opacity: 1;
   flex-shrink: 0;
@@ -982,14 +1013,19 @@ body {
 
 
   /* each “row” becomes full-width but maxes out so it stays centered */
+  .recommendation--carousel {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: stretch;
+  }
   .carousel-row {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
     width: 100% !important;
-    max-width: 360px;     /* or whatever your card width is */
+    max-width: 360px !important;
     margin: 0 auto 1.5rem !important;
-    gap: 10rem !important;
+    /* this gap was tiny; bump it up: */
+    gap: 2rem !important;
     padding-bottom: 0 !important;
   }
 
@@ -1222,13 +1258,6 @@ body {
   }
 
     /* stack carousel vertically & center everything */
-  .recommendation--carousel {
-    flex-direction: column;
-    align-items: center;       /* <-- center the whole column */
-    padding-left: 0;
-    padding-top: 10px;
-    gap: 100px !important; /* space between rows */
-  }
 
   .review-block {
     border-radius: 20px;
@@ -1610,6 +1639,16 @@ body {
 
 .contact {
   margin-left: 5%;
+}
+
+.contact-img {
+  width: 48px;
+  height: 48px;
+}
+
+.property-dropdown {
+  width: 20px;
+  height: 12px;
 }
 
 .collage {
