@@ -4,14 +4,7 @@ h1 {
 }
 
 /* ─── improve contrast on search input ─── */
-.search__input {
-  /* make the typed text very dark against white */
-  color: #1F2937; /* ~17:1 contrast on #fff */
-}
-.search__input::placeholder {
-  /* deep-gray placeholder, ~4.5:1 on white */
-  color: #4B5563 !important;
-}
+
 
 /* ─── darken the “Contact Now” button ─── */
 .search__button {
@@ -40,24 +33,26 @@ h1 {
   bottom: 2rem;
   transform: translateX(-50%);
   background: #D1FAE5;
-  color: #1B1C57;
+  color: #0B9567;
   border-radius: 40px;
   box-shadow: 0 4px 24px 0 rgba(16, 185, 129, 0.10);
-  padding: 0.75rem 2.5rem 0.75rem 1.5rem;
+  padding: 16px 40px 16px 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.2rem;
+  width: 400px;
   min-width: 320px;
   max-width: 480px;
   z-index: 9999;
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 600;
   animation: fadeInUp 0.5s;
 }
 
 .cookie-banner__icon {
-  width: 56px;
-  height: 56px;
+  width: 24px;
+  height: 24px;
   margin-right: 0.5rem;
   flex-shrink: 0;
 }
@@ -353,6 +348,7 @@ body {
     font-family: 'Lexend', sans-serif;
     background-size: cover;
     margin: 0%;
+    width: 1440px;
 }
 
 
@@ -374,7 +370,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: 30px;;
-    margin-left: 70px;
 }
 
 .logo_graphic {
@@ -429,7 +424,8 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: 0;
-  min-height: 100vh;
+  width: 1440px;
+  height: 720px;
 
     
 }
@@ -455,6 +451,7 @@ body {
     font-weight: 150;
     color: #626687; /* Gray color for description */
     margin-top: 0.5rem;
+    width: 440px;
 }
 .hero__left {
   flex: 1 1 0;
@@ -467,10 +464,38 @@ body {
   box-sizing: border-box;
 }
 
+.partnerships {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: fit-content;
+  gap: 1rem;
+}
+
+.partnerships__title{
+  font-weight: 200;
+  color: #888B97;
+}
+
+.partnerships--img {
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.tripadvisor {
+  width: 140px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .hero__right {
   flex: 1 1 0;
-  background: url('../img/hero_bg.png') no-repeat center right;
-  background-size: cover;
+  background: url('../img/hero_bg.svg') no-repeat center right;
+  background-size: 720px 720px; /* Adjust size as needed */
   position: relative;
   display: flex;
   justify-content: center;
@@ -484,17 +509,17 @@ body {
 
 .hero__metrics {
   display: flex;
-  font-size: 10px;;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: center;
-  gap: 3.8rem;
+  gap: 16px;
   position: absolute;
   bottom: 2rem;
   left: 0;
   width: 100%;
   z-index: 1;
-  margin-bottom: 80px;;
+  margin-bottom: 80px;
+  margin-left: 40px;
+  
 }
 
 
@@ -506,10 +531,20 @@ body {
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.10);
   border: 1.5px solid #E0E3EB;
-  padding: 8px;
-  height: 150px;
-  width: 200px;
+  padding: 24px;
+  height: fit-content;
+  width: 339px;
   box-sizing: border-box;
+  
+}
+
+.metric-people {
+  display: flex;
+}
+
+.people {
+  width: 112px;
+  height: 56px;
 }
 
 .hero__metric-img {
@@ -527,8 +562,9 @@ body {
 }
 
 .hero__metric--1{
-  height: 70px;
-  width: 160px;;
+  height: 56px;
+  width: 112px;
+  max-width: 100%;
 }
 
 .hero__metric--3 {
@@ -539,30 +575,49 @@ body {
   height: 70px;
 }
 .hero__metric--2 {
-  height: 70px;
-  width: 70px;
+  height: 56px;
+  width: 56px;
   padding: 0px;
 }
 
-.box--1{
-  width: 375px;
-  height: 100px;
-  padding: 8px;
-  margin-left: 150px;;
-}
-.box--2{
-  width: 350px;
-  height: 100px;
-}
-.box--3{
-  width: 300px;
-  height: 100px;
-}
+
 .box {
-  width: 70px;;
+  color: #888B97;
+  font-size: 12px;
+  font-weight: 400;
+  width: 163px;
+  display: flex;
+  flex-direction: column;
 }
+
+.box--1 {
+  width: 339px;
+  height: fit-content;
+  gap: 16px;
+  flex: 0 0 339px;    /* no grow, no shrink, basis=339px */
+  box-sizing: border-box;
+}
+
+.box--2 {
+  width: 202px;
+  height: fit-content;
+  gap: 16px;
+  flex: 0 0 202px;    /* no grow, no shrink, basis=339px */
+  box-sizing: border-box;
+}
+
+.box--3 {
+  width: 303px;
+  height: 104px;
+  gap: 16px;
+  flex: 0 0 202px;    /* no grow, no shrink, basis=339px */
+  box-sizing: border-box;
+}
+
 .bold {
-  font-weight: 700;
+  font-weight: 600;
+  color: #1B1C57;
+  font-size: 16px;
 }
 
 .navigation {
@@ -635,18 +690,18 @@ body {
   align-items: center;
   background: #fff;
   border-radius: 32px;
-  box-shadow: 0 4px 24px 0 rgba(16, 185, 129, 0.10);
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  width: 100%;
-  height: 64px;
-
+  padding: 4px 4px 4px 24px;
+  gap: 16px;
+  width: 496px;
+  height:fit-content;
   position: relative;
   margin: 2rem 0 2.5rem 0;
+  border: 1px solid #E0E3EB;
 }
 
 .search__icon {
-  width: 56px;
-  height: 56px;
+  width: 24px;
+  height: 24px;
   margin-right: 1rem;
   opacity: 1;
   flex-shrink: 0;
@@ -661,32 +716,28 @@ body {
   flex: 1;
   background: transparent;
   padding: 0.5rem 0 0.5rem 0;
-  color: #888;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
 
 .search__input::placeholder {
-  color: #888;
-  opacity: 1;
   font-size: 1.15rem;
   font-family: 'Lexend', Arial, sans-serif;
   font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #888B97;
 }
 
 .search__button {
-  position: static;
-  transform: none;
   margin-left: 0.5rem;
-  width: 140px;
+  width: 150px;
   height: 48px;
   padding: 0 18px;
   background: #10b981;
   color: #fff;
   border: 2px solid #10b981;
   border-radius: 32px;
-  font-family: 'Lexend', Arial, sans-serif;
-  font-weight: 300;
   box-shadow: 0 4px 24px 0 rgba(16, 185, 129, 0.15);
   cursor: pointer;
   transition: background 0.2s, border 0.2s;
@@ -694,6 +745,16 @@ body {
   align-items: center;
   justify-content: center;
   line-height: 1;
+}
+
+.search__content {
+  width: 70px;
+  width: 24px;
+  min-width: 70px;
+    font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: 'Lexend', Arial, sans-serif;
 }
 
 .search__button:hover {
@@ -709,599 +770,21 @@ body {
   }
 }
 
-/* ========== TABLET LANDSCAPE (900px ↓) ========== */
-@media (max-width: 1200px) {
-  html { font-size: 93.75%; }
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero__left,
-  .hero__right {
-    width: 100%;
-    padding: 2rem 1rem;
-  }
-
-  .container--3 {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem;
-  }
-
-  .sell__left,
-  .sell__right {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-  }
-
-  .sign_up {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
-  }
-
-  .articles__container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .footer {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
-  }
-}
-
-/* ========== TABLET PORTRAIT (600px ↓) ========== */
-@media (max-width: 900px) {
-  html { font-size: 87.5%; }
-  .navigation__button{
-    background: #D1FAE5;
-    color: #0B9567;
-    border: 1px solid #0B9567;
-  }
-
-  .hero search {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    margin: 3rem 0;
-    margin-bottom: 6rem; /* below fixed nav */
-  }
-  .header__logo {
-    margin: 0.5rem 0 0 1rem;
-  }
-  .logo_graphic {
-    width: 30px;
-    height: 30px;
-  }
-  .logo_first,
-  .logo_second {
-    width: 20px;
-    height: 20px;
-  }
-  .logo__name {
-    font-size: 1rem;
-    margin-left: 0.5rem;
-  }
-
-  /* force nav items into one row, equal width */
-  .navigation__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0;
-    gap: 0.5rem;
-    list-style: none;
-  }
-
-  /* each <li> takes an equal share */
-  .navigation__item {
-    flex: 1 1 0;
-    margin: 0;
-    min-width: 0; /* allow shrinking */
-  }
-
-  /* buttons fill their <li> completely */
-  .navigation__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5rem 1;
-    font-size: 0.875rem;
-    text-align: center;
-    white-space: nowrap; /* prevent wrapping */
-  }
-
-    .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background: transparent;
-    z-index: 10001;    /* ← higher than almost anything */
-  }
-
-  .carousel-row {
-    flex-direction: column;
-    padding: 0;
-    gap: 1rem;
-  }
-
-  .carousel-col {
-    width: 100%;
-  }
-
-
-
-  .hero__right {
-    display: none !important;
-  }
-
-  /* make hero a single-column centered block */
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 2rem 1rem;
-        /* gradient overlay for transparency, then the image */
-    position: relative;
-    border-radius: 0; /* remove any rounding */
-    background-size: 150% auto;
-
-  }
-
-  /* ensure the left hero content spans full width */
-  .hero__left {
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box;
-      margin-top: 4rem;
-  }
-
-  /* container--1: remove forced min-height and add some vertical padding */
-  .container--1 {
-    min-height: auto;
-    padding: 4rem 1rem; /* tweak as needed for balance */
-        position: relative;
-    z-index: 1;
-    width: 100%;
-    padding: 2rem 1rem;
-  }
-  .hero__metrics {
-    display: none !important;
-  }
-
-}
-
-/* ========== PHONE (600px ↓) ========== */
-@media (max-width: 600px) {
-  html { font-size: 81.25%; }
-
-    .sign_up {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 2rem !important;
-    margin: 2rem 1rem !important;
-    padding: 0 !important;
-  }
-  .sign_left,
-  .sign_right {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 2rem 1rem !important;
-  }
-  /* if you have that negative top‐margin on the form, reset it */
-  .sign_form {
-    margin-top: 0 !important;
-  }
-
-  /* ----- Footer: column, centred, full-width children ----- */
-  .footer {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    padding: 1rem !important;
-    margin: 2rem 0 !important;
-  }
-  .footer--1,
-  .footer-quarter {
-    width: 100% !important;
-    text-align: center !important;
-    align-items: center !important;
-  }
-
-  .navigation__button{
-    background: #D1FAE5;
-    color: #0B9567;
-    border: 1px solid #0B9567;
-  }
-
-  .hero search {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    margin: 3rem 0;
-    margin-bottom: 6rem; /* below fixed nav */
-  }
-  .header__logo {
-    margin: 0.5rem 0 0 1rem;
-  }
-  .logo_graphic {
-    width: 30px;
-    height: 30px;
-  }
-  .logo_first,
-  .logo_second {
-    width: 20px;
-    height: 20px;
-  }
-  .logo__name {
-    font-size: 1rem;
-    margin-left: 0.5rem;
-  }
-
-  /* force nav items into one row, equal width */
-  .navigation__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0;
-    gap: 0.5rem;
-    list-style: none;
-  }
-
-  /* each <li> takes an equal share */
-  .navigation__item {
-    flex: 1 1 0;
-    margin: 0;
-    min-width: 0; /* allow shrinking */
-  }
-
-  /* buttons fill their <li> completely */
-  .navigation__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5rem 1;
-    font-size: 0.875rem;
-    text-align: center;
-    white-space: nowrap; /* prevent wrapping */
-  }
-
-    .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background: #fff;
-    z-index: 10001;    /* ← higher than almost anything */
-  }
-
-  .cookie-banner {
-    display: none;
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-    min-width: unset;
-    max-width: 90vw;
-    border-radius: 18px;
-    gap: 0.5rem;
-    z-index: 10002;
-
-    box-shadow: 0 2px 8px rgba(16,185,129,0.10);
-  }
-
-  .recommendation--carousel img,
-  .small-image,
-  .big-image,
-  .left_scatter img,
-  .right_scatter img {
-    z-index: 0;
-  }
-
-
-
-  /* each “row” becomes full-width but maxes out so it stays centered */
-  .recommendation--carousel {
-    flex-direction: column;
-    padding-left: 0;
-    align-items: stretch;
-  }
-  .carousel-row {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 360px !important;
-    margin: 0 auto 1.5rem !important;
-    /* this gap was tiny; bump it up: */
-    gap: 2rem !important;
-    padding-bottom: 0 !important;
-  }
-
-  /* ensure each card block sits in the center of its row */
-  .carousel-col {
-    margin: 0 auto !important;
-  }
-
-  .search {
-    order: -1;
-    margin-top: 4.5rem; /* below fixed nav */
-    padding-top: 0.5rem;
-    z-index: 900;
-    background: none;
-    position: relative;
-  }
-  
-  .search__input-container--1 {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .search__button {
-    width: 100%;
-  }
-
-  .subscribe__input-container,
-  .subscribe__button {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .footer-quarter,
-  .footer--1 {
-    width: 100%;
-  }
-
-  .section--recommendations,
-  .section--sell,
-  .reviews,
-  .articles {
-    padding: 2rem 1rem;
-  }
-
-  .hero__title {
-    font-size: 1.25rem;
-  }
-
-  .hero__description {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .box--1, .box--2, .box--3 {
-    width: 100%;
-  }
-
-  .subscribe {
-    margin: 2rem 0;
-  }
-
-  .input__form {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background: #fff;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
-  .navigation {
-    margin: 0;
-    width: auto;
-  }
-  .navigation__list {
-    flex-direction: row;
-    gap: 1rem;
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-
-.hero__right {
-    display: none !important;
-  }
-
-  /* make hero a single-column centered block */
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 2rem 1rem;
-        /* gradient overlay for transparency, then the image */
-    position: relative;
-    border-radius: 0; /* remove any rounding */
-    background-size: 150% auto;
-
-  }
-
-  /* ensure the left hero content spans full width */
-  .hero__left {
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box;
-      margin-top: 4rem;
-  }
-
-  /* container--1: remove forced min-height and add some vertical padding */
-  .container--1 {
-    min-height: auto;
-    padding: 4rem 1rem; /* tweak as needed for balance */
-        position: relative;
-    z-index: 1;
-    width: 100%;
-    padding: 2rem 1rem;
-  }
-  .hero__metrics {
-    display: none !important;
-  }
-
-
-  .container--3 {
-    display: flex;
-    flex-direction: column;   /* stack left + right */
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-  }
-
-    .section--sell,
-  .section--recommendations,
-  .reviews {
-    margin: 0;
-    padding: 2rem 1rem;
-  }
-
-  .carousel-col {
-    margin: 5rem 0;
-  }
-
-  .section__recommendations {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: none;
-}
-
-.section--sell {
-  background: radial-gradient(
-    circle at 105% 70%,
-    rgba(255, 250, 130, 0.42) 0%,
-    rgba(255, 152, 130, 0.28) 30%,
-    rgba(255, 255, 255, 0.03) 50%
-  );
-
-  margin-top: 0;
-  border-top: none;
-    position: relative;
-      .section--sell {
-    padding: 2rem 1rem;       /* lighter padding on mobile */
-    margin: 0;               /* remove any extra offsets */
-  }
-}
-    /* style the left column (copy) */
-  .sell__left {
-    width: 100%;
-    padding: 0;
-  }
-  .sell__left h2,
-  .sell__left h1 {
-    text-align: center;
-    font-size: 1.5rem;        /* scale headings down */
-    margin-bottom: 0.75rem;
-  }
-  .sell__left p {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-    color: #4a4a4a;            /* soften body copy */
-  }
-
-  .sell__left .owner__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 2rem auto 0;  /* tweak vertical spacing as needed */
-}
-
-  /* house details: wrap into two rows */
-  .house__details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem 2rem;
-    margin: 1rem 0;
-  }
-  .house__details span {
-    flex: 1 1 45%;           /* two items per line */
-    text-align: center;
-    font-size: 0.9rem;
-  }
-
-  /* style the right column (image) */
-  .sell__right {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  .sell__right img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;     /* soften corners slightly */
-  }
-
-    /* stack carousel vertically & center everything */
-
-  .review-block {
-    border-radius: 20px;
-  }
-
-  .carousel-col {
-    width: auto;               /* let them shrink to their natural width */
-    max-width: 90%;            /* but ensure they don’t get too wide */
-    margin: 0 auto 1rem;       /* center each card & add bottom gutter */
-  }
-
-  /* if you have any call-to-action buttons in that section */
-  /* e.g. next/prev arrows or “view more” buttons: */
-  .recommendation--carousel .travel__image,
-  .recommendation--carousel button {
-    display: inline-flex;      /* make sure they’re not hidden */
-    visibility: visible;
-    opacity: 1;
-    margin: 0.5rem auto;       /* center under each card if needed */
-  }
-
-
-}
-
-
-
-
 /* Carousel: lock scroll to horizontal only, prevent vertical scroll, and hide scrollbars */
 .recommendation--carousel {
-  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-left: 30px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
   overscroll-behavior-x: contain;
-  overscroll-behavior-y: none;
-  touch-action: pan-x;
+  overscroll-behavior-y: auto;
+  touch-action: pan-x pan-y;
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  padding-left: 30px;
+  scrollbar-width: none;
 }
 .recommendation--carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 /* Carousel row: items side by side, no wrapping, horizontal scroll if needed */
@@ -1504,9 +987,7 @@ body {
   margin-left: 325px; /* Pushes travel controls to the right */
 }
 
-.right_arrow {
-  transform: rotate(180deg);
-}
+
 
 .travel__image {
   width: 12px;
@@ -1526,10 +1007,6 @@ body {
   margin-left: 20px;
 }
 
-.hero__description {
-  margin-left: 20px;
-  width: 440px;
-}
 
 .house__details {
   display: flex;
@@ -1637,18 +1114,18 @@ body {
   margin-top: 5%;;
 }
 
-.contact {
-  margin-left: 5%;
-}
 
-.contact-img {
-  width: 48px;
-  height: 48px;
-}
 
 .property-dropdown {
   width: 20px;
   height: 12px;
+  transform: rotate(90deg);
+}
+
+.property-button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .collage {
@@ -2055,12 +1532,7 @@ body {
 }
 
 /* Remove border for search bar input */
-.search__input {
-  border: none !important;
-  outline: none;
-  background: transparent;
-  box-shadow: none;
-}
+
 
 textarea {
   border-radius: 20px;
