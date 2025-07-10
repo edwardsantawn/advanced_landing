@@ -71,30 +71,52 @@
         <main>
           <section class="unified-showcase">
             <section class="section--recommendations">
-              <span class="reco">Our Recommendation</span>
+              <span class="reco"><img src="img/rectangle.svg" alt="" class="rectangle">Our Recommendation</span>
               <div class="container--2">
                 <h1 class="feature section-h1">Featured House</h1>
                 <div class="types">
                   <ul class="types__list">
-                    <li class="types__item"><button class="types__button"><img src="img/house.svg" alt="house icon">House</button></li>
-                    <li class="types__item"><button class="types__button"><img src="img/villa.svg" alt="villa icon">Villa</button></li>
-                    <li class="types__item"><button class="types__button"><img src="img/apartment.svg" alt="apartment icon">Apartment</button></li>
+                    <li class="types__item">
+                      <button class="types__button">
+                        <img src="img/house.svg" alt="house icon">
+                        House
+                      </button>
+                    </li>
+                    <li class="types__item">
+                      <button class="types__button">
+                        <img src="img/villa.svg" alt="villa icon">
+                        Villa
+                      </button>
+                    </li>
+                    <li class="types__item">
+                      <button class="types__button">
+                        <img src="img/apartment.svg" alt="apartment icon">
+                        Apartment
+                      </button>
+                    </li>
                   </ul>
                 </div>
                 <div class="travel">
-                  <img class="travel__image left_arrow" src="img/left_green.png" alt="left arrow">
-                  <img class="travel__image right_arrow" src="img/left_green.png" alt="right arrow">
+                  <button class="travel__btn left_btn">
+                    <img class="icon normal"  src="img/left_button.svg" alt="left arrow">
+                    <img class="icon pressed" src="img/left_alt.svg" alt="left arrow pressed">
+                  </button>
+                  <button class="travel__btn right_btn">
+                    <img class="icon normal"  src="img/right_button.svg" alt="right arrow">
+                    <img class="icon pressed" src="img/right_alt.svg" alt="right arrow pressed">
+                  </button>
                 </div>
               </div>
+
               <div class="recommendation--carousel">
-                <div class="carousel-row">
+                <div class="carousel-row"id="rec-carousel-row">
                   <div class="carousel-col">
                     <div class="carousel-card">
-                      <div class="carousel-card__img">
-                        <img src="img/carousel1.png" alt="Carousel 1">
+                      <div class="carousel-card__img-1">
+                        <img src="img/carousel1.svg" alt="Carousel 1">
                       </div>
                       <h4 class="carousel-card__title">Roselands House</h4>
-                      <div class="carousel-card__price">$35,000,000</div>
+                      <div class="carousel-card__price">$35.000.000</div>
                       <div class="carousel-card__owner">
                         <img class="carousel-card__owner-img" src="img/owner1.png" alt="Owner 1">
                         <div class="carousel-card__owner-info">
@@ -106,7 +128,7 @@
                   </div>
                   <div class="carousel-col">
                     <div class="carousel-card">
-                      <div class="carousel-card__img">
+                      <div class="carousel-card__img-1">
                         <img src="img/carousel2.png" alt="Carousel 2">
                       </div>
                       <h4 class="carousel-card__title">Woodlandside</h4>
@@ -122,7 +144,7 @@
                   </div>
                   <div class="carousel-col">
                     <div class="carousel-card">
-                      <div class="carousel-card__img">
+                      <div class="carousel-card__img-1">
                         <img src="img/carousel3.png" alt="Carousel 3">
                       </div>
                       <h4 class="carousel-card__title">The Old Lighthouse</h4>
@@ -138,7 +160,7 @@
                   </div>
                   <div class="carousel-col">
                     <div class="carousel-card">
-                      <div class="carousel-card__img">
+                      <div class="carousel-card__img-1">
                         <img src="img/carousel4.png" alt="Carousel 4">
                       </div>
                       <h4 class="carousel-card__title">Cosmo's House</h4>
@@ -155,13 +177,11 @@
                 </div>
               </div>
             </section>
-
             <section class="section--sell">
-              <div class="container--3">
                 <div class="sell__left">
-                  <span class="reco">Ready to Sell!</span>
-                  <h1 class="feature section-h1">Let's Tour And See Our House!</h1>
-                  <span class="hero__description">Houses recommended by our partners that have been curated to become the home of your dreams!</span>
+                  <span class="reco sell"><img src="img/rectangle.svg" alt="" class="rectangle">Ready to Sell!</span>
+                  <h1 class="feature section-h1 tour">Let's Tour And See Our House!</h1>
+                  <span class="house__description">Houses recommended by our partners that have been curated to become the home of your dreams!</span>
                   <div class="house__details">
                     <span class="house__deet">House Detail</span>
                     <div class="amenities amenities--1">
@@ -175,7 +195,7 @@
                     <hr class="amenities-separator">
                     <div class="owner__info">
                       <div class="carousel-card__owner">
-                        <img class="owner-img" src="img/owner4.png" alt="Owner 4">
+                        <img class="owner-img seller" src="img/owner1.png" alt="Owner 4">
                         <div class="carousel-card__owner-info">
                           <span class="carousel-card__owner-name">Jenny Wilson</span><br>
                           <span class="carousel-card__owner-location">Preston Rd. Inglewood, Maine</span>
@@ -194,7 +214,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
             </section>
 
             <section class="reviews">
@@ -207,9 +226,9 @@
                   <div class="carousel-col">
                     <div class="carousel-card review-card">
                       <div class="carousel-card__img">
-                        <img src="img/rec1.png" alt="Review Image">
+                        <img src="img/rec1.svg" alt="Review Image">
                       </div>
-                      <div class="review-block">
+                      <div class="review-block" id="review-block">
                         <h2 class="review__subject">My House Sold Out Fast!</h2>
                         <p class="review__body">
                           I was finally able to sell my house quickly through Hounter by immediately
@@ -218,7 +237,7 @@
                         </p>
                         <div class="review__footer">
                           <div class="review__owner carousel-card__owner">
-                            <img class="review-card__img carousel-card__owner-img" src="img/owner1.png" alt="Owner">
+                            <img class="review-card__img carousel-card__owner-img" src="img/owner1.svg" alt="Owner">
                             <div class="review__owner-info carousel-card__owner-info">
                               <span class="review__owner-name carousel-card__owner-name">Dianne Russell</span>
                               <span class="review__owner-location carousel-card__owner-location">Manchester, Kentucky</span>
@@ -235,9 +254,9 @@
                   <div class="carousel-col">
                     <div class="carousel-card review-card">
                       <div class="carousel-card__img">
-                        <img src="img/rec2.png" alt="Review Image">
+                        <img src="img/rec2.svg" alt="Review Image">
                       </div>
-                      <div class="review-block">
+                      <div class="review-block" id="review-block">
                         <h2 class="review__subject">Amazing Experience!</h2>
                         <p class="review__body">
                           I had a fantastic experience selling my house with Hounter. The process was smooth,
@@ -245,7 +264,7 @@
                         </p>
                         <div class="review__footer">
                           <div class="review__owner carousel-card__owner">
-                            <img class="review-card__img carousel-card__owner-img" src="img/owner2.png" alt="Owner">
+                            <img class="review-card__img carousel-card__owner-img" src="img/owner4.svg" alt="Owner">
                             <div class="review__owner-info carousel-card__owner-info">
                               <span class="review__owner-name carousel-card__owner-name">Robert Fox</span>
                               <span class="review__owner-location carousel-card__owner-location">Dr. San Jose, South Dakota</span>
@@ -264,7 +283,7 @@
                       <div class="carousel-card__img">
                         <img src="img/rec3.png" alt="Review Image">
                       </div>
-                      <div class="review-block">
+                      <div class="review-block" id="review-block">
                         <h2 class="review__subject">The Old Lighthouse</h2>
                         <p class="review__body">
                           The Hounter team made the process of selling my unique property easy and stress-free. Their expertise and support were invaluable.
@@ -290,9 +309,9 @@
             </section>
 
             <section class="articles">
-              <div class="reviews__heading">
+              <div class="reviews__heading" id="articles__topic">
                 <span class="reco">See tips and tricks from our partnership</span>
-                <h1 class="feature section-h1">Find Out More About Selling And Buying Homes</h1>
+                <h1 class="feature section-h1 find" >Find Out More About Selling And Buying Homes</h1>
                 <button class="articles__button ">More Articles</button>
               </div>
               <div class="articles__container">

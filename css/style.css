@@ -133,7 +133,7 @@ h1 {
   position: relative;
   background: #ffffff;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .unified-showcase::before {
@@ -154,36 +154,45 @@ h1 {
 }
 
 .section--recommendations,
-.section--sell,
 .reviews,
 .articles {
   position: relative;
   background: transparent !important;
-  padding: 4rem 2rem;
+  padding:0 2rem;
   z-index: 1; /* keep content above the background glow */
+  height: 812px;
 }
+
+
+.articles {
+  margin-bottom: 200px;
+}
+
+#articles__topic {
+ width: 580px;
+ display: flex;
+ text-align: center;
+ align-items: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+
 
 .section--recommendations {
-  padding-top: 6rem;
+  padding-top: 3rem;
+  margin-top: 40px;
+
+    width: 1440px;
+  height: 812px;
+    padding-top: 6rem;
+    padding-bottom: 0;
 }
 
 
-
-.section--recommendations,
-.section--sell,
-.reviews,
-/* Consolidated .articles and .section--recommendations styles */
-.articles,
-.section--recommendations {
-  background: transparent !important;
-  margin: 0;
-  padding: 4rem 2rem;
-}
-/* === REVIEW CARD OVER IMAGE === */
 .carousel-card.review-card {
   position: relative;
   padding: 0;
-  border-radius: 24px;
   overflow: visible;
   background: none;
   box-shadow: none;
@@ -195,17 +204,23 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 24px;
 }
 
-/* === OVERLAPPING REVIEW BLOCK === */
+#review-block{
+  height: auto;
+  width: 612px;
+  padding: 32px;
+  border-radius: 16px;
+  gap: 24px;
+}
+
 .carousel-card.review-card .review-block {
   position: absolute;
   left: 50%;
   bottom: -50px;
   transform: translateX(-50%);
   background: #fff;
-  border-radius: 20px;
+
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.16);
   padding: 2rem;
   width: 90%;
@@ -232,10 +247,11 @@ h1 {
 }
 
 .review__body {
-  font-size: 1.05rem;
+  font-size: 14px;
   color: #626687;
+  font-weight: 400;
   margin-bottom: 0.5rem;
-  line-height: 1.5;
+  line-height: 24px;
 }
 
 /* === FOOTER LAYOUT === */
@@ -257,7 +273,6 @@ h1 {
 .review-card__img.carousel-card__owner-img {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
   object-fit: cover;
   border: 2px solid #fff;
   box-shadow: 0 2px 8px rgba(31, 38, 135, 0.08);
@@ -271,15 +286,11 @@ h1 {
   line-height: 1.1;
 }
 
-.review__owner-name.carousel-card__owner-name {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #1B1C57;
-}
 
 .review__owner-location.carousel-card__owner-location {
-  font-size: 0.95rem;
-  color: #888;
+  font-size: 12px;
+  font-weight: 300;
+  color: #888B97;
 }
 
 /* === RATING === */
@@ -305,19 +316,23 @@ h1 {
   padding: 2rem 2rem 1.5rem 2rem;
   /* fallback for cards that are not review cards */
 }
+
+#rec-carousel-row {
+  height: auto;
+}
+
 /* Use only the original image size, no forced width/max-width */
 .carousel-card__img {
   display: inline-block;
   width: fit-content;
   max-width: 100%;
-  margin: 0 auto 1rem auto;
+
 }
 
-/* Show image at its natural/original size */
-.carousel-card__img img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.carousel-card__img-1 {
+  display: inline-block;    /* shrink to fit the image */
+  overflow:hidden;         /* clip anything outside the border-radius */
+  border-radius: 24px;
 }
 
 /* Review block should match the image's natural/original width */
@@ -341,8 +356,8 @@ hr.amenities-separator {
   border: none;
   border-top: 1.5px solid #e0e3eb;
   margin: 1.5rem 0 1.5rem 0;
-  width: 85%;
-  max-width: 490px;
+  width: 100%;
+
 }
 body {
     font-family: 'Lexend', sans-serif;
@@ -425,7 +440,7 @@ body {
   background-size: 100% 100%;
   margin: 0;
   width: 1440px;
-  height: 720px;
+  height: 812px;
 
     
 }
@@ -434,6 +449,7 @@ body {
   display: flex;
   width: 100%;
   flex: 1;
+  height: 100vh;  
 }
 
 .hero__title{
@@ -495,7 +511,7 @@ body {
 .hero__right {
   flex: 1 1 0;
   background: url('../img/hero_bg.svg') no-repeat center right;
-  background-size: 720px 720px; /* Adjust size as needed */
+background-size: auto 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -781,6 +797,7 @@ body {
   flex-direction: row;
   align-items: stretch;
   padding-left: 30px;
+  padding-right: 20px;
   scrollbar-width: none;
 }
 .recommendation--carousel::-webkit-scrollbar {
@@ -795,6 +812,8 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
+  height: 505px;
+  width: 2416px;
   min-width: 100%;
   min-height: 480px; /* Increase height so review card can extend below image */
   padding-bottom: 100px; /* Extra space for overlap */
@@ -808,6 +827,7 @@ body {
   justify-content: flex-start;
   gap: 0;
   flex: 0 0 auto;
+
   min-width: 320px;
   max-width: 100vw;
 }
@@ -858,11 +878,7 @@ body {
 }
 
 .carousel-card__img {
-  width: auto;
-  height: auto;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 1rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -871,22 +887,22 @@ body {
 .carousel-card__img img {
   /* width and height removed to allow original image size */
   object-fit: unset;
-  border-radius: 16px;
 }
 
 .carousel-card__title {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
   color: #1B1C57;
-  margin: 0.5rem 0 0.25rem 0;
+
   text-align: left;
   width: 100%;
+  height: auto;
   letter-spacing: 0.01em;
 }
 .carousel-card__price {
-  font-size: 1.05rem;
+  font-size: 20px;
   font-weight: 500;
-  color: #1B1C57;
+  color: #626687;
   margin-bottom: 0.75rem;
   width: 100%;
   text-align: left;
@@ -894,8 +910,8 @@ body {
 .carousel-card__owner {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  width: 100%;
+  gap: 16px;
+  width: auto;
   margin-top: 0.5rem;
 }
 .carousel-card__owner-img {
@@ -907,26 +923,31 @@ body {
   background: #fff;
 }
 .carousel-card__owner-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.1;
+  display: blovk;
+  height: 52px;
 }
 .carousel-card__owner-name {
-  font-size: 0.95rem;
+  font-size: 18px;
   font-weight: 500;
   color: #1B1C57;
-  margin-bottom: 0.1rem;
+  line-height: 24px;
 }
 .carousel-card__owner-location {
-  font-size: 0.85rem;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
   color: #888;
 }
 
 .container--2{
   display: flex;;
   flex-direction: row;
-  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  width: 1192px;
+  height: 55px;
+  justify-content: space-between;
 }
 
 .types__list {
@@ -951,20 +972,35 @@ body {
   justify-content: center;
   color: #10B981;
   background: rgba(255,255,255,0.10); /* lighter glassmorphism */
-  border: 1.25px solid rgb(255, 255, 255);
+  border: 1.25px solid #0B9567;
   border-radius: 50px;
-  padding: 0.5em 1.5em;
+  padding: 12px 24px 12px 24px;
   font-size: 13px;
   font-weight: 400;
   font-family: inherit;
   transition: background 0.5s, color 0.2s, box-shadow 0.2s, border 0.2s;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.08);
   backdrop-filter: blur(2px); /* softer blur */
   -webkit-backdrop-filter: blur(2px);
   gap: 0.5em;
-  height: 45px;
+  height: 48px;
+}
+
+.types__button:hover{
+    background: #D1FAE5;
+    color: #0B9567;
+    border: none;
+}
+
+.types__button:active {
+  background: #B1F1E0;
+  color: #0B9567;
+  outline: none;
+  transform: scale(0.98);
+  box-shadow: 0 .5rem 1rem rgba(#0B9567,.2);
+  border: none;
+
 }
 
 .types__button img {
@@ -976,7 +1012,20 @@ body {
 
 .reco {
   color: #F59E0B;
-  margin-left: 20px;;
+  margin-left: -20px;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.sell {
+  margin-left: -40px;
+}
+
+.section-h1 {
+  font-size: 32px;
+  color: #1B1C57;
 }
 
 .travel {
@@ -984,19 +1033,48 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-left: 325px; /* Pushes travel controls to the right */
+  margin-right: -125px; /* Pushes travel controls to the right */
 }
 
-
-
-.travel__image {
-  width: 12px;
-  height: 12px;
+.travel__btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: none;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  border: #0B9567 solid 1px;
-  border-radius: 50%;
-  padding: 0.3rem;
+  transition: transform 0.3s ease-in-out;
+}
+.travel__btn:active {
+  transform: scale(0.9);
+}
+
+/* Stack both states on top of each other */
+.travel__btn .icon {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.15s ease-in-out;
+}
+.travel__btn .pressed {
+  opacity: 0;
+}
+
+/* On press, fade out .normal, fade in .pressed */
+.travel__btn:active .normal {
+  opacity: 0;
+}
+.travel__btn:active .pressed {
+  opacity: 1;
+}
+
+/* Focus outline for accessibility */
+.travel__btn:focus {
+  outline: 2px solid #10B981;
+  outline-offset: 2px;
 }
 
 .section__recommendations {
@@ -1007,6 +1085,9 @@ body {
   margin-left: 20px;
 }
 
+.tour {
+  margin-left: 0;
+}
 
 .house__details {
   display: flex;
@@ -1023,6 +1104,12 @@ body {
   gap: 0.5rem;
   /*width: 440px;*/
   height: 32px;
+  color: #626687;
+}
+
+.seller {
+  height: 56px;
+  width: 56px;
 }
 
 .amenities span {
@@ -1038,25 +1125,34 @@ body {
 .house__deet {
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 600;
+  color: #1B1C57
 }
 
-.container--3 {
+.house__description {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+
+}
+
+.section--sell {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  padding-left: 30px;
-  margin-top: -120px;
-  padding-top: 120px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 150px;
+  padding-left: 32px;
 }
 
 .sell__left {
-  flex: 2 1 540px;
-  min-width: 440px;
+  width: 600px;
   max-width: 900px;
   display: flex;
+  margin-left: 40px;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.5rem;
@@ -1068,17 +1164,14 @@ body {
   margin-left: 0;
 }
 
-.amenities {
-  width: auto;
-  min-width: 320px;
-  justify-content: flex-start;
-  gap: 3.5rem;
+.amenities--1 {
+  margin-bottom: 30px;
 }
 
 .sell__right {
   flex: 1 1 320px;
   min-width: 320px;
-  max-width: 50%;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1140,7 +1233,6 @@ body {
 
 .big-image {
   margin-top: 50px;
-  border-radius: 16px;
   display: block;
   margin-left: 0;
 }
@@ -1185,11 +1277,7 @@ body {
   justify-content: center;
 }
 
-.section--recommendations {
-  padding-top: 3rem;
-  margin-top: 40px;
-  margin-bottom: 10px; /* Add more space for review block overlap */
-}
+
 
 .articles__button {
   background: #10b981;
@@ -1221,9 +1309,6 @@ body {
   border-color: #0c8b5c;
 }
 
-.articles {
-  padding: 4rem 2rem;
-}
 
 .articles__heading {
   text-align: center;
@@ -1332,6 +1417,9 @@ body {
     rgba(255, 152, 130, 0.28) 20%,
     rgba(255, 255, 255, 0.03) 30%
   );
+  height:812px ;
+  margin-bottom: 100px;
+  margin-top: 150px;
 }
 
 
