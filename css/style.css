@@ -18,6 +18,13 @@
   border-color: #065F46;
 }
 
+section h1,
+article h1,
+nav h1,
+aside h1 {
+  font-size: 2rem;
+}
+
 
 /* ensure every h1 in a section/article/… keeps a stable size */
 .section h1,
