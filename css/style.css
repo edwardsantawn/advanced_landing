@@ -6,6 +6,21 @@
 
 /* ─── improve contrast on search input ─── */
 
+/* Fix for images with margin-bottom */
+.rectangle--mb {
+  margin-bottom: 20px;
+}
+
+/* Fix for label in form group with fixed width */
+.label--fixed-width {
+  width: 70px;
+}
+
+/* Fix for consent label color */
+.label--gray {
+  color: #626687;
+}
+
 
 /* ─── darken the “Contact Now” button ─── */
 .search__button {
