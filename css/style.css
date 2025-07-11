@@ -21,6 +21,11 @@
   color: #626687;
 }
 
+section h1 {
+  font-size: 2rem;
+}
+
+
 /* Set global base sizes for all heading levels */
 h1 { font-size: 2rem; }
 h2 { font-size: 32px; }
