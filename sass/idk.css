@@ -736,17 +736,17 @@ background-size: auto 100%;
 }
 
 .navigation__button:hover{
-    background: #D1FAE5;
-    color: #0B9567;
+    background: #d2f6e3;
+    color: #059364;
     border: 1px solid #0B9567;
 }
 
 .navigation__button:active {
-  background: #B1F1E0;
-  color: #0B9567;
+  background: #d2f6e3;
+  color: #059364;
   outline: none;
   transform: scale(0.98);
-  box-shadow: 0 .5rem 1rem rgba(#0B9567,.2);
+  box-shadow: 0 .5rem 1rem rgba(#059364,.2);
 
 }
 .search {
