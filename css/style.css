@@ -336,6 +336,7 @@
 /* Use only the original image size, no forced width/max-width */
 .carousel-card__img {
   display: inline-block;
+  position: relative;
   width: fit-content;
   max-width: 100%;
 
@@ -343,8 +344,12 @@
 
 .carousel-card__img-1 {
   display: inline-block;    /* shrink to fit the image */
-  overflow:hidden;         /* clip anything outside the border-radius */
+  overflow:hidden; 
+    display: inline-block;
+  position: relative;        /* clip anything outside the border-radius */
   border-radius: 24px;
+  height: auto;
+  width: auto;
 }
 
 /* Review block should match the image's natural/original width */
@@ -897,9 +902,13 @@ background-size: auto 100%;
   justify-content: center;
   background: #f3f4f6;
 }
-.carousel-card__img img {
-  /* width and height removed to allow original image size */
-  object-fit: unset;
+.type {
+  position: absolute;
+  bottom: 3.25%;
+  left: 3%;
+  width: 100px; /* adjust to fit nicely */
+  height: 30px;
+  z-index: 10;
 }
 
 .carousel-card__title {
