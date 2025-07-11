@@ -23,7 +23,7 @@
 
 /* Set global base sizes for all heading levels */
 h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
+h2 { font-size: 32px; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
 h5 { font-size: 1rem; }
@@ -1135,6 +1135,7 @@ background-size: auto 100%;
 .feature {
   margin-left: 20px;
   font-size: 2rem;
+  color:#1B1C57
 }
 
 .tour {
@@ -1849,7 +1850,8 @@ footer.footer {
 /* make each quarter flex:1, but give branding a little extra width */
 .footer-quarter {
   flex: 1;
-  min-width: 180px;   /* prevent collapsing too small */
+  min-width: 180px; 
+  z-index: 10;
 }
 .footer--1 {
   flex: 1.5;
