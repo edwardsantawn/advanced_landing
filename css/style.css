@@ -21,6 +21,11 @@
   color: #626687;
 }
 
+section h1,
+footer h1 {
+  font-size: 2rem;
+}
+
 
 /* ─── darken the “Contact Now” button ─── */
 .search__button {
