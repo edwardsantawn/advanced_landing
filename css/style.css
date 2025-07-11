@@ -572,7 +572,7 @@ body {
 
 .hero__right {
   flex: 1 1 0;
-  background: url('../img/hero_bg.png') no-repeat center right;
+  background: url('../img/hero_bg.svg') no-repeat center right;
 background-size: auto 100%;
   position: relative;
   display: flex;
@@ -1346,6 +1346,10 @@ background-size: auto 100%;
   justify-content: center;
 }
 
+.rec-img {
+  width: 784px;
+  height: 429px;
+}
 
 
 .articles__button {
