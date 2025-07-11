@@ -2221,6 +2221,10 @@ footer.footer {
     transform: scale(1.2);
   }
 
+    .sign_up {
+    flex-direction: column;
+  }
+
 }
 
 
