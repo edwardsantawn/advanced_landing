@@ -2253,6 +2253,9 @@ footer.footer {
     height: auto;
   }
 
+    .rec-carousel-row {
+      margin-left: -20px;
+    }
   /* ensure each card block sits in the center of its row */
   .carousel-col {
     margin: 0 auto !important;
