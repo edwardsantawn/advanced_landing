@@ -95,28 +95,28 @@ h1 {
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
-  color: #888;
+  color: #888B97;
 }
 
 /* Pale placeholder for select (cross-browser) */
 
 /* Pale placeholder for select (cross-browser) */
+/* education dropdown placeholder */
 .custom-select-wrapper select:invalid {
-  color: #bfc3c9 !important;
+  color: #888B97 !important;
 }
 .custom-select-wrapper select option[disabled][selected] {
-  color: #bfc3c9 !important;
+  color: #888B97 !important;
 }
-
-/* For Firefox: style the first option if selected */
-.custom-select-wrapper select option:first-child {
-  color: #bfc3c9;
-}
-
-/* For Chrome/Safari: style the select if the first option is selected */
+/* for Chrome/Safari when first option is shown and not focused */
 .custom-select-wrapper select:not(:focus):not(:active):invalid {
-  color: #bfc3c9;
+  color: #888B97 !important;
 }
+/* for Firefox first‐option styling */
+.custom-select-wrapper select option:first-child {
+  color: #888B97;
+}
+
 
 .custom-select-wrapper .select-arrow {
   position: absolute;
@@ -136,22 +136,33 @@ h1 {
   overflow: visible;
 }
 
+.unified-showcase {
+  position: relative;
+  overflow: hidden; /* make sure the blurred edges don’t spill out */
+}
+
 .unified-showcase::before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background:
-
-    radial-gradient(circle at 115% 35%, rgba(255, 250, 130, 0.35) 0%, transparent 35%),
-    radial-gradient(circle at 120% 35%, rgba(255, 130, 190, 0.25) 0%, transparent 40%),
-    radial-gradient(circle at -40% 80%, rgba(200,255,130,0.2) 0%, transparent 30%),
-    radial-gradient(circle at -40% 82%, rgba(130, 255, 210, 0.2) 0%, transparent 40%);
-  z-index: 0;
+  top: -20%; left: -20%;       /* nudge the blob off-center so the blur “feels” soft */
+  width: 140%;                  /* oversize so blur never shows an ugly edge */
+  height: 140%;
   pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(circle 500px at 80% 29%, rgb(255, 250, 130, 0.6) 0%, transparent 35%),
+    radial-gradient(circle 900px at 77% 27%, rgb(255, 151, 128, 0.6) 0%, transparent 40%),
+    radial-gradient(circle 900px at 20% 57%, rgba(185, 255, 130, 0.5) 0%, transparent 30%),
+    radial-gradient(circle 900px at 20% 53%, rgba(130, 255, 210, 0.5) 0%, transparent 40%),
+    radial-gradient(circle 900px at 70% 85%, rgba(185, 255, 130, 0.5) 0%, transparent 30%),
+    radial-gradient(circle 900px at 75% 84%, rgba(130, 187, 255, 0.5) 0%, transparent 40%);
+    ;
+
+  /* ← this is the magic: blur out those hard edges */
+  filter: blur(80px);
 }
+
 
 .section--recommendations,
 .reviews,
@@ -761,6 +772,7 @@ background-size: auto 100%;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  font-weight: 400;;
 }
 
 .search__content {
@@ -1318,14 +1330,18 @@ background-size: auto 100%;
 .articles__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
+}
+
+.author__img {
+  height: 40px;
 }
 
 .articles__left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3.75rem;
 }
 
 .article-preview {
@@ -1352,16 +1368,17 @@ background-size: auto 100%;
   display: flex;
   align-items: center;
   font-size: 0.85rem;
-  font-weight: 600;
-  color: #5f5f5f;
+  font-weight: 400;
+  color: #3C4563;
   gap: 0.75rem;
 }
 
 .article-title {
   margin: 0.2rem 0;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.3;
+  color: #1B1C57;
 }
 
 .article-title.large {
@@ -1391,6 +1408,11 @@ background-size: auto 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.article-description {
+  color: #626687;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .article-meta {
@@ -1435,7 +1457,12 @@ background-size: auto 100%;
 
 .input__form {
   position: relative;
-  background: linear-gradient(90deg, #AECFFF 0%, #E3F9F5 100%);
+  background: linear-gradient(
+    135deg,
+    #AECFFF 0%,
+    #E3F9F5 50%,
+    #AECFFF 100%
+  );
   border-radius: 32px;
   width: 100%;
   max-width: 1280px;
@@ -1488,8 +1515,10 @@ background-size: auto 100%;
 .subscribe__button {
   background: #10B981;
   color: white;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 400;
+    font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 32px;
@@ -1505,23 +1534,27 @@ background-size: auto 100%;
 .left_scatter img,
 .right_scatter img {
   position: absolute;
-  width: 56px;
-  height: 56px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific placements based on screenshot */
-.left_scatter img:nth-child(1) { top: 15%; left: 2%; border-radius: 20px; }
-.left_scatter img:nth-child(2) { top: 30%; left: 10%; }
-.left_scatter img:nth-child(3) { bottom: 25%; left: 5%; }
-.left_scatter img:nth-child(4) { bottom: 15%; left: 15%; }
+.left_4 {
+  height: 36px;
+  width: 36px;
+}
 
-.right_scatter img:nth-child(1) { top: 15%; right: 10%; border-radius: 20px; }
-.right_scatter img:nth-child(2) { top: 30%; right: 2%; }
-.right_scatter img:nth-child(3) { bottom: 25%; right: 5%; }
-.right_scatter img:nth-child(4) { bottom: 10%; right: 15%; }
+
+/* Specific placements based on screenshot */
+.left_scatter img:nth-child(1) { top: 15%; left: 5%; border-radius: 20px; height: 100px; width: 100px;}
+.left_scatter img:nth-child(2) { top: 65%; left: 19.5%; height: 75px; width: 75px;}
+.left_scatter img:nth-child(3) { bottom: 35%; left: 7%;   border: 1px solid #fff;height: 56px; width: 56px;}
+.left_scatter img:nth-child(4) { bottom: 70%; left: 20%;   border: 1px solid #fff; height: 56px; width: 56px;}
+
+.right_scatter img:nth-child(1) { top: 15%; right: 19%; border-radius: 20px; height: 90px; width: 90px;}
+.right_scatter img:nth-child(2) { top: 60%; right: 7%; height: 74px; width: 74px; }
+.right_scatter img:nth-child(3) { bottom: 35%; right: 19%;   border: 1px solid #fff; height: 56px; width: 56px;}
+.right_scatter img:nth-child(4) { bottom: 60%; right: 9%; height: 56px; width: 56px;}
 
 .sign_body {
   font-weight: 200;
@@ -1575,11 +1608,11 @@ background-size: auto 100%;
 }
 
 .sign_form {
-  margin-top: -15rem;
+  margin-top: -5rem;
   display: flex;
   flex-direction: column;
   font: 400 1rem 'Lexend', sans-serif;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .form_group {
@@ -1588,18 +1621,38 @@ background-size: auto 100%;
   align-items: center;
 }
 
-.form_group label {
+.form_group label{
   margin-right: 4rem;
+  color: #1B1C57;
 }
 
-.form_group input[type="text"],
-.form_group select,
-.form_group textarea {
-  flex: 1 1 0;
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
+.sign_up .sign_form select:invalid {
+  color: #888B97 !important;
 }
+.sign_up .sign_form select option[disabled][selected] {
+  color: #888B97 !important;
+}
+/* And when you haven’t focused/opened the dropdown yet */
+.sign_up .sign_form select:not(:focus):invalid {
+  color: #888B97 !important;
+}
+
+/* ─── unify the join‐form fields ─── */
+.sign_up .sign_form input[type="text"],
+.sign_up .sign_form select,
+.sign_up .sign_form textarea {
+  border: 1px solid #E0E3EB;    /* the light-grey pill shape */
+  border-radius: 32px;          /* big rounding to match mock */
+  padding: 1rem;     
+  width: 496px;           /* your existing padding */
+  outline: none;                /* no default focus ring */
+  background: #fff;             /* or transparent if you stack them over white */
+  color: #888B97;               /* your placeholder/text color */
+  box-sizing: border-box;       /* include border in the width */
+}
+/* remove any old dark‐border remnants */
+
+
 
 .sign_form {
   width: 100%;
@@ -1613,9 +1666,9 @@ background-size: auto 100%;
   padding: 1rem;
   border-radius: 30px;
   outline: none;
-  border: 2px solid #222;
-  color: #888;
+  color: #888B97;
   font-size: 1rem;
+  font-family: 'Lexend', sans-serif;
   transition: border 0.2s, box-shadow 0.2s;
 }
 
@@ -1634,10 +1687,16 @@ textarea {
 }
 
 .checkbox {
-  display: flex;
-  align-items: flex-start;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 14px;
+  font-weight: 300px;
+  margin-left: 140px;
+  margin-top: 20px;
+
+}
+
+#consent {
+  color: #626687;
 }
 
 .checkbox input[type="checkbox"] {
@@ -1649,61 +1708,196 @@ textarea {
 }
 
 .message {
+  top: 100px;
   margin-left: 0.6rem;
 }
 
-/* === FOOTER (Consolidated & Responsive) === */
-.footer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 2rem;
-}
-
-.footer h1 {
-  color: #1B1C57;
-}
-
-.footer--1, .footer-quarter {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 2rem;
-  width: auto;
-  justify-content: flex-start;
-  align-items: flex-start;
+.sign_up .sign_form textarea#message {
+  /* pull it out of the form_group’s centered row alignment */
   align-self: flex-start;
-  height: 100%;
+  /* push it down from its label */
+  margin-top: 1rem;    /* ← tweak this value to taste */
 }
 
-.footer-quarter span {
-    color: #888;
+/* 1) give each form row a positioning context */
+.sign_up .sign_form .form_group {
+  position: relative;
+}
+
+/* 2) style the textarea to match the mock */
+.sign_up .sign_form textarea#message {
+  width: 100%;
+  max-width: 496px;             /* same width as other inputs */
+  height: 160px;                /* or whatever exact height you need */
+  padding: 1.5rem 1rem 1rem;     /* top padding to make room for counter */
+  border: 1px solid #E0E3EB;    /* light-grey pill shape */
+  border-radius: 32px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1B1C57;                /* dark text once they type */
+  background: #fff;
+  resize: none;
+}
+
+/* 3) make the placeholder the pale grey from the mock */
+.sign_up .sign_form textarea#message::placeholder {
+  color: #888B97;
+}
+
+/* 4) absolutely position the char count in the top-right of that form row */
+.sign_up .sign_form .char_count {
+  position: relative;
+  top: 4rem;   /* tweak to sit right at the padding edge */
+  right: 3rem;    /* align with the textarea’s right padding */
+  font-size: 0.75rem;
+  color: #888B97; 
+  font-size: 12px;;
+}
+/* 1) Hide the native checkbox */
+input#consent {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 2) Style the label (make room for the icon) */
+label[for="consent"] {
+  position: relative;
+    display: inline-block;
+  padding-left: 32px;       /* equal to icon width + gap */
+  color: #626687;           /* your text colour */
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+/* 3) Unchecked state icon */
+label[for="consent"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-100%);
+  width: 24px;  /* match your SVG */
+  height: 24px;
+  background: url("../img/unchecked.svg") no-repeat center;
+  background-size: contain;
+    margin-right: 32px;
+}
+
+/* 4) Checked state icon */
+input#consent:checked + label[for="consent"]::before {
+  background-image: url("../img/checked.svg");
+}
+
+
+/* === FOOTER (Consolidated & Responsive) === */
+/* ─── Footer: full-width, spaced quarters ─── */
+footer.footer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;                    /* center on page */
+  padding: 4rem 2rem;                /* plenty of breathing room */
+  display: flex;
+  justify-content: space-between;    /* push quarters apart */
+  align-items: flex-start;           /* top-align everything */
+  box-sizing: border-box;
+  background: transparent;           /* remove any unwanted bg */
+}
+
+/* make each quarter flex:1, but give branding a little extra width */
+.footer-quarter {
+  flex: 1;
+  min-width: 180px;   /* prevent collapsing too small */
+}
+.footer--1 {
+  flex: 1.5;
+}
+
+/* quarter headings (“Property”, “Article”, “Contact”) */
+.footer-quarter h1 {
+  font-size: 1.5rem;   /* ~24px, adjust to taste */
+  font-weight: 600;
+  color: #1B1C57;
+  margin-bottom: 1rem;
+  display: flex;
+
 }
 
 .footer__logo {
-  display: flex;
-  align-items: center;
-  margin: 0;
+  margin-top: 0px;
+    display: flex;
+    align-items: center;
+    color: #1B1C57;
 }
+/* branding column copy (under the logo) */
+.footer--1_text {
+  display: block;
+  margin: 1rem ;   
+  margin-right: 50px; 
+  margin-left: 0;
+  font-size: 1rem;     /* ~16px */
+  line-height: 1.6;
+  color: #626687;
+}
+
+/* the “links” / list items under Property & Article */
+
+/* stack each quarter’s own children vertically */
+.footer-quarter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;           /* space between items */
+}
+
+/* tuck a little breathing room under each heading */
+.footer-quarter h1 {
+  margin-bottom: 1rem;
+}
+
+/* ensure even bare <span> links become blocks */
+
+
+.footer--2 span,
+.footer--3 span,
+.footer--3 span{
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #888B97;
+}
+
+/* contact column text is a tiny bit darker */
+.footer--4 span.contact {
+  color: #626687;
+}
+
+/* hover state for those “links” */
+.footer-quarter span:hover {
+  color: #1B1C57;
+}
+
+/* social icons row in branding */
 .social-media {
   display: inline-flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
-.cookie {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: #888;
+.social-media img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: opacity 0.2s;
+}
+.social-media img:hover {
+  opacity: 0.75;
 }
 
-section h1,
-article h1,
-aside h1,
-nav h1 {
-  font-size: 2rem; /* Or whatever size fits your design */
+/* small responsive tweak */
+@media (max-width: 1024px) {
+  footer.footer {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
 }
