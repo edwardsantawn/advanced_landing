@@ -1969,9 +1969,9 @@ footer.footer {
 @media (max-width: 1200px) {
     html { font-size: 87.5%; }
   .navigation__button{
-    background: #D1FAE5;
+
     color: #0B9567;
-    border: 1px solid #0B9567;
+
   }
 
   .hero search {
@@ -2220,10 +2220,7 @@ footer.footer {
     max-width: 500px;
     transform: scale(1.2);
   }
-
-    .sign_up {
-    flex-direction: column;
-  }
+  
 
 }
 
