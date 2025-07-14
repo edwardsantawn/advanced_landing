@@ -92,3 +92,49 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// Add this JavaScript to your HTML file or separate JS file
+
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewsCarousel = document.querySelector('.reviews .recommendation--carousel');
+  const reviewsDots = document.querySelectorAll('.reviews__carousel-dot');
+  const reviewCards = document.querySelectorAll('.reviews .carousel-col');
+  
+  if (!reviewsCarousel || !reviewsDots.length || !reviewCards.length) return;
+  
+  // Function to update active dot
+  function updateActiveDot() {
+    const scrollLeft = reviewsCarousel.scrollLeft;
+    const cardWidth = reviewCards[0].offsetWidth + 32; // Add gap between cards
+    const currentIndex = Math.round(scrollLeft / cardWidth);
+    
+    // Remove active class from all dots
+    reviewsDots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current dot
+    if (reviewsDots[currentIndex]) {
+      reviewsDots[currentIndex].classList.add('active');
+    }
+  }
+  
+  // Listen for scroll events
+  reviewsCarousel.addEventListener('scroll', updateActiveDot);
+  
+  // Click handlers for dots
+  reviewsDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      const cardWidth = reviewCards[0].offsetWidth + 32; // Add gap
+      const scrollTo = index * cardWidth;
+      
+      reviewsCarousel.scrollTo({
+        left: scrollTo,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  // Initial update
+  updateActiveDot();
+  
+  // Update on window resize
+  window.addEventListener('resize', updateActiveDot);
+});

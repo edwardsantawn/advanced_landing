@@ -233,19 +233,21 @@ aside h1 {
 }
 
 .hero__right {
-  flex: 1 1 0;
-  background: url('../img/hero_bg.svg') no-repeat center right;
-  background-size: auto 100%;
+  flex: 0 0 50%;
+  width: 50%;
+  background: url('../img/hero_bg.webp') no-repeat center center;
+  background-size: cover; /* Changed from contain to cover */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  min-width: 0;
-  height: 100%;
+  padding: clamp(1rem, 3vw, 2rem);
+  min-width: 280px;
+  min-height: clamp(300px, 50vh, 400px);
   box-sizing: border-box;
-  border-bottom-left-radius: 150px;
+  border-bottom-left-radius: clamp(60px, 10vw, 150px);
   overflow: hidden;
+  height: 100vh; /* Ensure it takes full viewport height */
 }
 
 /* Hero Metrics */
