@@ -288,7 +288,7 @@ aside h1 {
 .hero__right {
   flex: 0 0 50%;
   width: 50%;
-  background: url('../img/hero_bg.svg') no-repeat center center;
+  background: url('../img/hero_bg.webp') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
