@@ -2027,9 +2027,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 }
 
 @media (max-width: 1024px) {
-  .navigation {
-    margin-right: 50px;
-  }
+
 
   .travel {
     margin-right: auto;
@@ -2161,9 +2159,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
     border: 1px solid #059364;
   }
 
-  .navigation {
-    margin-right: 75px;
-  }
+
 
   .sell__left {
     width: auto;
