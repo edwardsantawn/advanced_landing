@@ -2540,7 +2540,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .search__input-container--1 {
-    height: 42px;
+    /* height: 42px; */
     transform: scale(0.8);
   }
 
