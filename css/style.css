@@ -2416,12 +2416,16 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 
   }
 
+  .search__input {
+    transform: scale(0.7) !important;
+  }
+
   .input__form {
     width: 80%;
   }
 
   .search {
-    transform: scale(0.75);
+    /* transform: scale(0.75); */
   }
 
 
