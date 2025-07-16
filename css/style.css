@@ -861,7 +861,7 @@ body > div > header > span {
   border-radius: 50px;
   padding: 12px 24px 12px 24px;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
   font-family: inherit;
   transition: background 0.5s, color 0.2s, box-shadow 0.2s, border 0.2s;
   cursor: pointer;
