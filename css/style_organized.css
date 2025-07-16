@@ -545,13 +545,16 @@ aside h1 {
 }
 
 /* Property Types */
+
+
+
 .types__list {
   display: flex;
   flex-direction: row;
   list-style: none;
   text-decoration: none;
   gap: 1rem;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 
 .types__item {
