@@ -282,7 +282,7 @@ aside h1 {
 
 .hero__title {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 600;
+  font-weight: 900;
   color: #1B1C57;
   line-height: 1.2;
   width: 420px;
@@ -296,7 +296,7 @@ aside h1 {
 
 .hero__description {
   font-size: 16px;
-  font-weight: 150;
+  font-weight: 300;
   color: #626687;
   margin-top: 0.5rem;
   width: 100%;
@@ -576,7 +576,7 @@ aside h1 {
 }
 
 .partnerships__title {
-  font-weight: 200;
+  font-weight: 300;
   color: #888B97;
   /* padding-bottom: 1rem; */
 
