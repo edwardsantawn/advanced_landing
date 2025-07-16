@@ -92,7 +92,8 @@ aside h1 {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: 0;
-  min-height: 100vh;
+  min-height: 820px; /* Keep this for minimum height */
+  height: auto; /* Added to allow natural height */
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
@@ -135,7 +136,7 @@ aside h1 {
 .header__logo {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 49px;
 }
 
 /* Logo Graphics */
@@ -203,10 +204,25 @@ aside h1 {
   transition: background 0.5s, color 0.2s, box-shadow 0.2s, border 0.2s;
   cursor: pointer;
   outline: none;
-  display: inline-block;
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
+  width: 108px; /* Added fixed width */
+  height: 34px; /* Added fixed height */
+  box-sizing: border-box; /* Added for consistent sizing */
   box-shadow: 0 2px 8px rgba(31, 38, 135, 0.08);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+/* Remove the specific selector since we're applying it to all buttons */
+/* body > div > header > ul > li:nth-child(1) {
+  width: 102px;
+  height: 34px;
+} */
+
+ .navigation__item:nth-child(3) .navigation__button {
+  width: 126px; /* Special width for 3rd button */
 }
 
 .navigation__button:hover {
@@ -244,7 +260,8 @@ aside h1 {
   width: 100%;
   max-width: 100vw;
   flex: 1;
-  min-height: 100vh;
+  min-height: auto; /* Changed from 100vh to auto */
+  height: fit-content; /* Added to make it fit content */
   flex-wrap: wrap;
   overflow-x: hidden;
 }
@@ -255,10 +272,11 @@ aside h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 32px;
   min-width: 280px;
   max-width: 100%;
-  max-height: 820px;
+  height: 820px; /* Fixed height */
+  max-height: 820px; /* Fixed max height */
   box-sizing: border-box;
 }
 
@@ -296,13 +314,13 @@ aside h1 {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  max-height: 820px;
+  max-height: none; /* Removed fixed max-height */
   min-width: 280px;
   min-height: 400px;
   box-sizing: border-box;
   border-bottom-left-radius: 80px;
   overflow: hidden;
-  height: 100vh;
+  height: auto; /* Changed from 100vh to auto */
 }
 
 
@@ -319,8 +337,8 @@ aside h1 {
   left: 0;
   width: 100%;
   z-index: 1;
-  margin-bottom: 36px;
-  margin-left: 50px;
+  margin-bottom: 48px;
+  margin-left: 48px;
 }
 
 .hero__metric {
@@ -328,10 +346,10 @@ aside h1 {
   align-items: center;
   gap: 0.75rem;
   background: #fff;
-  border-radius: 18px;
+  border-radius: 32px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.10);
   border: 1.5px solid #E0E3EB;
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   height: fit-content;
   width: 339px;
   box-sizing: border-box;
@@ -393,7 +411,7 @@ aside h1 {
   height: fit-content;
   gap: 16px;
   flex: 0 0 202px;
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
   box-sizing: border-box;
 }
 
@@ -422,8 +440,8 @@ aside h1 {
   justify-content: flex-start;
   background: none;
   box-shadow: none;
-  margin-top: -1rem;
-  padding-bottom: 2rem;
+  /* margin-top: -1rem;
+  padding-bottom: 2rem; */
   max-width: 480px;
   height: 100px;
   gap: 0;
@@ -553,23 +571,24 @@ aside h1 {
   align-items: center;
   flex-direction: row;
   width: fit-content;
-  gap: 1rem;
+  gap: 32px;
   transition: transform 0.3s ease; /* Smooth scaling transition */
 }
 
 .partnerships__title {
   font-weight: 200;
   color: #888B97;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 
 }
 
 .partnerships--img {
-  width: 100px;
-  height: 40px;
+  width: 82.75px;
+  height: 64px;
   object-fit: contain;
   border-radius: 8px;
   transition: all 0.3s ease; /* Smooth transitions */
+  margin-top: -24px;
 }
 
 
