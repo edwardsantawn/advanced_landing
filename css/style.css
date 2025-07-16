@@ -106,12 +106,13 @@ aside h1 {
   margin-top: 15px;
   /* width: 100%;
   max-width: 1192px; */
-  height: auto;
+  height: 40px;
   min-height: 55px;
   /* justify-content: space-between; */
   padding: 0 0 0 124px; /* Reduced from 124px to 32px */
   flex-wrap: wrap;
   box-sizing: border-box;
+  margin-bottom: 19px;
 }
 
 .types {
