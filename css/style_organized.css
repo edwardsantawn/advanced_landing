@@ -826,43 +826,19 @@ aside h1 {
    10. SELL SECTION
    ============================================== */
 
-.section--sell {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 150px;
-  padding: 7rem 32px 5rem 32px;
-}
 
-.sell__left {
-  width: 600px;
-  max-width: 900px;
-  display: flex;
-  margin-left: 40px;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1.5rem;
-}
 
-.sell__right {
-  flex: 1 1 0;
-  min-width: 320px;
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
+
+
+
 
 .sell {
-  margin-left: -40px;
+
 }
 
 .tour {
   margin-left: 0;
+  width:484px;
 }
 
 .house__description {
@@ -940,7 +916,7 @@ hr.amenities-separator {
   border: none;
   border-top: 1.5px solid #e0e3eb;
   margin: 1.5rem 0 1.5rem 0;
-  width: 100%;
+  width: 90%;
 }
 
 /* Image Collage */
@@ -954,38 +930,7 @@ hr.amenities-separator {
   align-items: center;
 }
 
-.big-image {
-  margin-top: 50px;
-  display: block;
-  margin-left: 0;
-}
 
-.small-images {
-  position: absolute;
-  left: 50%;
-  bottom: -30px;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  align-items: flex-end;
-}
-
-.small-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1;
-}
-
-.small-image.medium {
-  margin-left: -120px;
-  width: auto;
-  height: auto;
-  z-index: 2;
-}
 
 /* ==============================================
    11. REVIEWS SECTION
