@@ -415,7 +415,7 @@ body { font-family: system-ui, -apple-system, sans-serif; }
                   <h4 class="sign_body sign5">
                     We then make sure the work is done to your complete satisfaction.
                   </h4>
-                  <img src="img/sign.webp" alt="border" class="sign sign6" />
+                  <img src="img/create.svg" alt="border" class="sign sign6" />
                 </div>
                 <div class="sign_right">
                   <form class="sign_form">
@@ -442,16 +442,12 @@ body { font-family: system-ui, -apple-system, sans-serif; }
                     </div>
                     <div class="form_group">
                       <label for="message">Message</label>
-                      <textarea
-                        id="message"
-                        class="message"
-                        rows="4"
-                        placeholder="Message"
-                        maxlength="500"
-                        oninput="document.getElementById('charCount').innerText = `${this.value.length}/500`;"
-                      ></textarea>
-                      <div class="char_count" id="charCount">0/500</div>
+                      <div class="form_input_wrapper">
+                        <textarea id="message" placeholder="Message" maxlength="500" oninput="document.getElementById('charCount').textContent = this.value.length + '/500';"></textarea>
+                        <span class="char_count" id="charCount">0/500</span>
+                      </div>
                     </div>
+
                     <div class="form_group checkbox">
                       <input type="checkbox" id="consent" class="consent" required />
                       <label for="consent" class="label--gray">
