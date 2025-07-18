@@ -104,20 +104,32 @@ aside h1 {
   flex-direction: row;
   align-items: center;
   margin-top: 15px;
-  /* width: 100%;
-  max-width: 1192px; */
+  /* width: 1192px; */
+  /* width: 1192px !important; */
+  /* justify-content: space-between; */
   height: 40px;
   min-height: 55px;
-  /* justify-content: space-between; */
-  padding: 0 0 0 124px; /* Reduced from 124px to 32px */
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 0 124px; /* Reduced from 124px to 32px */
+  /* flex-wrap: wrap; */
   box-sizing: border-box;
+  /* gap: 37px; */
+  margin-right: 124px;
   margin-bottom: 19px;
 }
 
+#section--recommendations > div.container--2 > span {
+  width: 254px !important;
+    /* margin-right: 177px; */
+}
+
 .types {
-  margin-left: 177px;
-  margin-right: 177px;
+  max-width: 472px;
+  /* margin-right: 177px; */
+}
+
+.types__list {
+
 }
 
 /* ==============================================
@@ -143,6 +155,11 @@ aside h1 {
   display: flex;
   align-items: center;
   margin-top: 49px;
+  gap: 13.28px;
+}
+
+body > div > header > span > span.logo__name > img {
+  margin-top: 10px;
 }
 
 /* Logo Graphics */
@@ -287,12 +304,13 @@ aside h1 {
 }
 
 .hero__title {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 40px;
   font-weight: 900;
   color: #1B1C57;
   line-height: 1.2;
   width: 420px;
   max-width:100%;
+
 }
 
 .hero__highlight {
@@ -617,9 +635,16 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
 
 
   .hero__left {
-    padding: 120px 20px 20px 20px;
+    /* padding: 120px 20px 20px 20px; */
     gap: 48px;
   }
+
+  .hero__title {
+    font-size: 32px;
+    width: 100%;
+  }
+
+ 
 
 
   .types {
@@ -636,6 +661,12 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
 
   .hero__metrics {
     padding-bottom: rem;
+  }
+}
+
+@media (max-width: 920px) {
+  #section--recommendations > div.container--2 > span {
+    font-size: 20px !important;
   }
 }
 
@@ -658,6 +689,11 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
     gap: 0.7rem;
     justify-content: flex-start;
   }
+
+    body > div > div.hero > div.hero__left {
+    padding: 20px 20px 120px 20px !important;
+    gap: 32px;
+  }
   
   .partnerships--img, 
   .tripadvisor {
@@ -676,6 +712,14 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
   .partnerships {
     transform: scale(0.6);
     gap: 0.5rem;
+  }
+
+  body > div > div.hero > div.hero__left > span.hero__title{
+    font-size: 32px;
+  }
+
+  .search__button {
+    display: none;
   }
 
   .checkbox {
@@ -1109,105 +1153,106 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
    ============================================== */
 
 
-   .section--sell {
 
-    margin-top: 120px;
-    margin-bottom: 113px;
-   }
+.section--sell {
 
-
-  .sell__container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 180px;
-        height: 459px;
-    width: 1440px;
-    padding: 0  102px 0 84px;
-    z-index: 2;
-
-  }
-
-  .sell__left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    width: 524px;
-    height: 404px;
-    margin: 28px 0 28px 0;
-    z-index: 2;
-  }
-
-  .sell {
-    margin-bottom: 6px;
-  }
-
-  .tour { 
-    margin-left: 40px;
-    margin-bottom: 16px;
-    width: 484px;
-  }
-
-  .house__description {
-    margin-left: 40px;
-    width: 413px;
-    font-size: 16px;
-    font-weight: 300;
-    color: #888B97;
-  }
-
-  .house__details {
-    margin-left: 40px;
-    margin-top: 24px;
-    gap: 24px
-  }
-
-  .house__deet {
-    margin-bottom: 24px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1B1C57;
-    line-height: 100%;
-  }
-
-  .amenities {
-    display: flex;
-    flex-direction: row;
-    gap: 53px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #626687;
-    line-height: 100%;
-  }
-
-  .amenities--1 {
-    margin-bottom: 12px;
-    margin-top: 30px;
-  }
+  margin-top: 120px;
+  margin-bottom: 113px;
+}
 
 
-  .bedrooms,
-  .bathrooms,
-  .carports,
-  .floors {
-    display: flex;
-    align-items: center;
-    gap:16px;
-    width: 193.5px;
-    padding: 0 8px 0 8px;
-    height: 32px;
-  }
+.sell__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* gap: 180px; */
+  max-height: 459px;
+  max-width: 1440px;
+  margin: 0  84px 0 84px;
+  z-index: 2;
 
-  .amenities-separator {
-    margin-top: 30px;
-    /* margin-bottom: 32px; */
-      border: none;
+}
+
+.sell__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 524px;
+  max-height: 404px;
+  margin: 28px 0 28px 0;
+  z-index: 2;
+}
+
+.sell {
+  margin-bottom: 6px;
+}
+
+.tour {
+  margin-left: 40px;
+  margin-bottom: 16px;
+  width: 484px;
+}
+
+.house__description {
+  margin-left: 40px;
+  width: 413px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888B97;
+}
+
+.house__details {
+  margin-left: 40px;
+  margin-top: 24px;
+  gap: 24px
+}
+
+.house__deet {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1B1C57;
+  line-height: 100%;
+}
+
+.amenities {
+  display: flex;
+  flex-direction: row;
+  gap: 53px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #626687;
+  line-height: 100%;
+}
+
+.amenities--1 {
+  margin-bottom: 12px;
+  margin-top: 30px;
+}
+
+
+.bedrooms,
+.bathrooms,
+.carports,
+.floors {
+  display: flex;
+  align-items: center;
+  gap:16px;
+  width: 193.5px;
+  padding: 0 8px 0 8px;
+  height: 32px;
+}
+
+.amenities-separator {
+  margin-top: 30px;
+  /* margin-bottom: 32px; */
+  border: none;
   border-top: 1.5px solid #e0e3eb;
   margin: 32px 0 0 0;
   width: 90%;
-  }
+}
 
-  .owner__info {
+.owner__info {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1233,7 +1278,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
 
 
 .owner_sell {
- margin-left: 40px;;
+  margin-left: 40px;;
 }
 
 body > main > section > section.section--sell > div > div.sell__left > div.owner__info.seller__info > div > div > span.carousel-card__owner-name {
@@ -1342,9 +1387,9 @@ body > main > section > section.section--sell > div > div.sell__left > div.owner
 
 .small1,
 .small2 {
-    width: 96px;
+  width: 96px;
   height: 80px;
-    transform: translateX(330px);
+  transform: translateX(330px);
 }
 
 .small-image.medium {
@@ -1358,13 +1403,15 @@ body > main > section > section.section--sell > div > div.sell__left > div.owner
 }
 
 .sell__right {
-  flex: 1;
+  max-width: 528px;
+  max-height: 459px;
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 528px;
-  height: 459px;
+  flex-shrink: 0;
 }
+
+
 
 /* ==============================================
    11. REVIEWS SECTION
@@ -2246,22 +2293,6 @@ input#consent:checked + label[for="consent"]::before {
   transform: scale(0.98);
 }
 
-// ...existing code...
-
-
-body > main > section > section.sign_up > div.sign_left > h4.sign_body.sign5 {
-  margin-bottom: 0;
-}
-
-.sign1 {
-  text-align: center;
-}
-
-body > main > section > section.sign_up > div.sign_left > img.sign.sign6 {
-  width: 261px;
-  height: 206px;
-}
-
 /* ==============================================
    15. FOOTER
    ============================================== */
@@ -2528,15 +2559,19 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 
   }
 
+  header.header {
+    padding-left: 80px;
+  }
+
   .header__logo {
     margin: 0.5rem 0 0 1rem;
     transform: scale(1.1);
-    margin-left: 0;
+    margin-left: 14px;
   }
 
   .logo_graphic {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
   }
 
   .logo_first,
@@ -2546,8 +2581,9 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   }
 
   .logo__name {
-    font-size: 1rem;
-    margin-left: 0.5rem;
+    /* font-size: 1rem; */
+    /* margin-left: 0.5rem; */
+    margin-bottom: 10px;
   }
 
   .navigation__list {
@@ -2601,9 +2637,10 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   }
 
   .container--2 {
-    flex-direction: column;
+    /* flex-direction: column; */
     height: auto;
-    align-items: normal;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .types__list {
@@ -2690,11 +2727,14 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 
 @media (max-width: 1024px) {
 
+    .partnerships {
+    gap: 0;
+  }
 
   .travel {
     margin-right: auto;
     margin-left: 30px;
-    gap: 5rem;
+    /* gap: 5rem; */
   }
 
   .article-preview__text {
@@ -2717,7 +2757,8 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   }
 
   .container--2{
-    padding-left: 32px;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   .reco {
@@ -2784,7 +2825,6 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
     right: 19%; 
     border: 1px solid #fff; 
     height: 56px; 
-    width: 56px;
   }
   .right_scatter img:nth-child(4) { 
     bottom: 60%; 
@@ -2798,8 +2838,8 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   }
 
   .article-preview__img {
-    height: 110px;
-    max-width: 165px;
+    /* height: 110px;
+    max-width: 165px; */
     min-width: 110px;
   }
 
@@ -2823,8 +2863,20 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   .travel {
     margin-right: auto;
     margin-left: 30px;
-    gap: 5rem;
+    /* gap: 5rem; */
   }
+  .container--2 {
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+  }
+
+  #rec_carousel {
+    padding-left: 40px !important;
+  }
+
+      #section--recommendations > span {
+    padding-left: 20px !important;
+      }
 
   .header {
     margin-bottom: 100px;
@@ -2977,6 +3029,7 @@ body > div > div.hero > div.hero__left > form > div {
     max-width: 500px;
     transform: scale(1.2);
     background: transparent;
+    margin-top: 0;
   }
 
   .container--1 {
@@ -2989,9 +3042,13 @@ body > div > div.hero > div.hero__left > form > div {
     );
   }
 
-  .sell__left {
-    padding: 0 20px 20px 0;
+  body > div > div.hero > div.hero__left {
+    padding: 140px 40px 0px 40px;
     width: 100%;
+  }
+
+  .hero__title {
+    font-size: 40px;
   }
 }
 
@@ -3075,6 +3132,13 @@ body > div > div.hero > div.hero__left > form > div {
   }
 }
 
+@media (max-width: 640px) {
+  .navigation__list {
+    /* transform: scale(0.8); */
+  }
+
+}
+
 /* Mobile Devices */
 @media (max-width: 600px) {
   html {
@@ -3127,7 +3191,7 @@ body > div > div.hero > div.hero__left > form > div {
 
   .header {
     flex-direction: column;
-    align-items: stretch;
+    /* align-items: stretch; */
     padding: 0;
     width: 100vw;
     background: #fff;
@@ -3223,7 +3287,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .hero__title {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
   }
 
   .hero__description {
@@ -3614,244 +3678,42 @@ body > div > div.hero > div.hero__left > form > div {
   .cookie-banner__close {
     font-size: 1.4rem;
   }
-
 }
 
-/* ==============================================
-   SELL SECTION RESPONSIVE SCALING
-   ============================================== */
-
-/* Responsive scaling for sell container */
-@media (max-width: 1400px) {
-  .sell__container {
-    transform: scale(0.95);
-    max-width: 1400px;
-  }
-  
-  /* Scale all images at the same rate */
-  .big-image {
-    transform: scale(0.95);
-  }
-  
-  .small-image {
-    transform: scale(0.95) translateX(330px);
-  }
-  
-  .small-image.medium {
-    transform: scale(0.95);
-  }
-}
-
-@media (max-width: 1300px) {
-  .sell__container {
-    max-width: 1300px;
-    transform: scale(0.9);
-    gap: 80px;
-  }
-  
-  /* Scale all images at the same rate */
-  .big-image {
-    transform: scale(0.9);
-  }
-  
-  .small-image {
-    transform: scale(0.9) translateX(330px);
-  }
-  
-  .small-image.medium {
-    transform: scale(0.9);
-  }
-}
-
-@media (max-width: 1200px) {
-  .sell__container {
-    max-width: 1200px;
-    transform: scale(0.85);
-    padding: 0 42px 0 0;
-  }
-
-  .search__input-container--1 {
-    width: 400px;
-  }
-
-  .subscribe__content {
-    transform: scale(0.85);
-    margin: 0 2.5rem 0 2.5rem;
-  }
-
-.right_scatter img:nth-child(1) {
-  right: 14%
-}
-  
-  /* Scale all images at the same rate */
-  .big-image {
-    transform: scale(0.85);
-  }
-
-  .small-images {
-    bottom: 30px;
-  }
-  
-  .small-image {
-    transform: scale(0.85) translateX(330px);
-  }
-  
-  .small-image.medium {
-    transform: scale(0.85);
-  }
-}
-
-@media (max-width: 1100px) {
-  .sell__container {
-    max-width: 1100px;
-    transform: scale(0.8);
-  }
-
-  .articles__left {
-    gap: 60px;
-  }
-
-  .article-preview__img {
-    margin-left: 0;
-  }
-  
-  /* Scale all images at the same rate */
-  /* .big-image {
-    transform: scale(0.8);
-  }
-  
-  .small-image {
-    transform: scale(0.8) translateX(330px);
-  }
-  
-  .small-image.medium {
-    transform: scale(0.8);
-  } */
-}
-
-@media (max-width: 1000px) {
-  .sell__container {
-    max-width: 1000px;
-    transform: scale(0.75);
-  }
-
-  footer.footer {
-    margin-left: 2rem;
-    margin-right: 1rem;
-  }
-  
-  /* Scale all images at the same rate */
-  /* .big-image {
-    transform: scale(0.75);
-  }
-  
-  .small-image {
-    transform: scale(0.75) translateX(330px);
-  }
-  
-  .small-image.medium {
-    transform: scale(0.75);
-  } */
-}
-
-/* @media (max-width: 940px) {
-  .sell__container {
-    gap: 60px;
-    transform: scale(0.7);
-  }
-   */
-  /* Scale all images at the same rate */
-  /* .big-image {
-    transform: scale(0.7);
-  }
-  
-  .small-image {
-    transform: scale(0.7) translateX(330px);
-  }
-  
-  .small-image.medium {
-    transform: scale(0.7);
-  }
-} */
-
-@media (max-width: 900px) {
-  .sell__container {
-    transform: none; /* Remove scaling */
-    justify-content: center;
-    gap: 40px;
-    flex-direction: column;
-    align-items: center;
-    width: 900px
-  }
-
-  .section--sell {
-        padding: 6rem 0 12rem 0;
-  }
-
-  .sign_right {
-    max-width: 100%;
-  }
-
-  .sign_left {
-    width: 100%;
-  }
-
-  .sign_up {
-    gap: 2rem;
-  }
-  
-  /* Reset image scaling when layout changes to column */
-  .big-image {
-    transform: none;
-  }
-  
-  .small-image {
-    transform: translateX(calc(100% - 120px));
-  }
-  
-  .small-image.medium {
-    transform: none;
-  }
-}
-
-
-@media (max-width: 840px) {
-  .articles__right-img {
-    transform: scale(1.1);
-  }
-}
 
 @media (max-width: 800px) {
-  .sell__container {
-    width: 100%;
-    padding: 0 20px;
-    gap: 20px;
+  .container--2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0;
   }
+
+  .travel {
+    margin-left: 0;
+  }
+
+  .types__list {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  #section--recommendations > div.container--2 > span {
+    margin-left: 0;
+    font-size: 25px;
+  }
+
+      #section--recommendations > span {
+        padding-left: 40px !important;
+        padding-bottom: 10px;
+      }
+
   .sign_up {
     margin-bottom: 0px;
   }
-
-  .big-image {
-    width: 100%;
-    height: auto;
-    transform: none;
+  .rectangle {
+    display: none;
   }
 
-  .small-image {
-
-    height: auto;
-
-  }
-
-  .collage {
-    transform: scale(0.7);
-  }
-
-  .small-image.medium {
-
-    height: auto;
-    transform: none;
-  }
 
   .articles__left {
  flex: 1.5;
@@ -3874,6 +3736,9 @@ body > div > div.hero > div.hero__left > form > div {
   .tour {
     margin-left: 0;
   }
+  .partnerships{
+    gap: 5px;
+  }
   .house__description {
     margin-left: 0;
   }
@@ -3886,18 +3751,6 @@ body > div > div.hero > div.hero__left > form > div {
 
   .seller__button {
     transform: scale(0.8);
-  }
-  .collage {
-    transform: scale(0.6);
-    /* width: 455px; */
-    margin: 0;
-  }
-  .section--sell {
-    height: auto;
-    padding-bottom: 100px;
-  }
-  .small-images {
-    bottom: 75px;
   }
 }
 
@@ -3917,8 +3770,64 @@ body > div > div.hero > div.hero__left > form > div {
 
 }
 
-@media (max-width: 370px) {
-  .small-images {
-    bottom: 90px;
+/* ==============================================
+   19. SELL PAGE STYLES
+   ============================================== */
+
+/* Add responsive breakpoints to maintain consistent edge distance */
+
+@media (max-width: 1300px) {
+  .sell__container {
+    justify-content: space-between; /* Change to 100px as specified */
+    /* gap:  100px;  */
+  }
+
+  .sell__right {
+    transform: scale(0.9); /* Scale down the right section */
+  }
+}
+
+@media (max-width: 1200px) {
+  .sell__container {
+    margin: 0 80px; /* Change to 80px as specified */
+    justify-content: center;
+    gap: 0px;
+  }
+  .sell__right {
+    transform: scale(0.8);
+  }
+
+  body > main > section > section.section--sell > div > div.sell__left > span.feature.tour {
+    margin-left: 0;
+    font-size: 1.5rem ;
+  }
+
+  .house__description {
+    margin-left: 0;
+  }
+
+ 
+
+  .collage {
+    margin: 0;
+  }
+
+  .house__details {
+    margin-left: 0;
+  }
+
+  .owner_sell {
+    margin-left: 0;
+  }
+
+
+}
+
+@media (max-width: 900px) {
+  .sell__container {
+    padding: 0 20px; /* Change to 20px as specified */
+    gap: 40px;
+    flex-direction: column; /* Make vertical */
+    align-items: center;
   }
 }
