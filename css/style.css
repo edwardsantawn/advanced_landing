@@ -2431,14 +2431,18 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.2rem;
-  width: 400px;
+  /* gap: 1.2rem; */
+  width: 465px;
   min-width: 320px;
   max-width: 480px;
   z-index: 9999;
   font-size: 16px;
   font-weight: 600;
   animation: fadeInUp 0.5s;
+}
+
+#cookieBanner > span {
+  margin-left: 14px;
 }
 
 .cookie-banner__icon {
