@@ -2657,7 +2657,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 @media (max-width: 1050px) {
   .sign_left,
   .sign_right {
-    transform: scale(0.9);
+    /* transform: scale(0.9); */
   }
   .sign_body {
     font-size: 14px;
@@ -2822,6 +2822,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 
   .article-preview__img {
     margin-left: 0;
+
   }
 
   .articles__right {
@@ -2837,7 +2838,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   } 
 
   .sign_form {
-    transform: scale(0.75);
+    /* transform: scale(0.75); */
   }
 
 
@@ -2976,6 +2977,7 @@ body > div > div.hero > div.hero__left > form > div {
 
   .sell__left {
     padding: 0 20px 20px 0;
+    width: 100%;
   }
 }
 
@@ -3774,6 +3776,14 @@ body > div > div.hero > div.hero__left > form > div {
 
   .sign_right {
     max-width: 100%;
+  }
+
+  .sign_left {
+    width: 100%;
+  }
+
+  .sign_up {
+    gap: 2rem;
   }
   
   /* Reset image scaling when layout changes to column */
