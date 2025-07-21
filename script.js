@@ -138,3 +138,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Update on window resize
   window.addEventListener('resize', updateActiveDot);
 });
+
