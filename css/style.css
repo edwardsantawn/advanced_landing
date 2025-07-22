@@ -3561,6 +3561,7 @@ body > div > div.hero > div.hero__left > form > div {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-top: 80px;
   }
 
   #articles__topic {
@@ -3735,6 +3736,14 @@ body > div > div.hero > div.hero__left > form > div {
     gap:0;
   }
 
+  .sell__container {
+    margin: 0 !important;
+  }
+
+  .reviews {
+    margin-top: 100px !important;
+  }
+
   .types {
     margin: 0;
   }
@@ -3817,6 +3826,10 @@ body > div > div.hero > div.hero__left > form > div {
   }
   footer.footer {
     padding-top: 150px;
+  }
+
+  .reviews {
+    margin-top: 0px !important;
   }
 
 
@@ -4508,7 +4521,7 @@ body > div > div.hero > div.hero__left > form > div {
     }
 
     #rec-carousel-row {
-      padding-bottom: 100px;
+      padding-bottom: 50px;
     }
 
     body > main > section > section.subscribe > div > div.subscribe__content > span {
