@@ -618,6 +618,8 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
 
 @media (max-width: 1024px) {
 
+
+
   .articles {
     padding: 0 40px !important;
   }
@@ -1061,7 +1063,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
     /* gap: 180px; */
     height: 459px;
     width: 1440px;
-    padding: 0  102px 0 84px;
+    /* padding: 0  102px 0 84px; */
     z-index: 2;
 
 }
@@ -4067,7 +4069,9 @@ body > div > div.hero > div.hero__left > form > div {
         transform: scale(0.9);
         gap: 0px;
     } */
-     .wrapper
+     .wrapper--1 {
+      margin: 4rem 60px 4rem 60px !important;
+     }
 
     /* Scale all images at the same rate */
     /* .big-image {
@@ -4117,10 +4121,10 @@ body > div > div.hero > div.hero__left > form > div {
     #section--recommendations > div.container--2 > span {
       font-size: 28px;
     }
-
+/* 
     .sell__container {
       padding: 0 60px;
-    }
+    } */
 
         .hero__left {
         padding: 182px 100px 100px 60px;
@@ -4353,7 +4357,7 @@ body > div > div.hero > div.hero__left > form > div {
 }
 
 @media (max-width: 1120px) {
-  /* .house__description {
+  .house__description {
         margin-left: 0; 
     }
     .house__details {
@@ -4385,7 +4389,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
   body > main > section > section.section--sell > div > div.sell__left > div.owner__info.seller__info > div > div > span.carousel-card__owner-name {
     margin-bottom: -1rem;
-  } */
+  }
   }
 
 @media (max-width: 1100px) {
@@ -4476,8 +4480,11 @@ body > div > div.hero > div.hero__left > form > div {
 }
 
 @media (max-width: 1024px) {
-  .sell__container {
+  /* .sell__container {
     padding: 0 20px 0 40px;
+  } */
+  .wrapper--1 {
+    margin: 4rem 40px 4rem 40px !important;
   }
 
   .article-title {
@@ -4538,7 +4545,11 @@ body > div > div.hero > div.hero__left > form > div {
     }
 
     .sell__right {
-      transform: scale(0.8);
+      transform: scale(0.85);
+
+    }
+    .collage {
+      margin-left: 0 !important;
     }
 
 /* 
@@ -4633,7 +4644,7 @@ body > div > div.hero > div.hero__left > form > div {
 }
 
 .wrapper--1 {
-  margin: 4rem 124px 4rem 124px;
+  margin: 4rem 124px 4rem 124px ;
 }
     
 @media (max-width: 900px) {
