@@ -4070,7 +4070,7 @@ body > div > div.hero > div.hero__left > form > div {
         gap: 0px;
     } */
      .wrapper--1 {
-      margin: 4rem 60px 4rem 60px !important;
+      margin: 4rem 60px 4rem 40px !important;
      }
 
     /* Scale all images at the same rate */
@@ -4355,7 +4355,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
 }
-
+/* 
 @media (max-width: 1120px) {
   .house__description {
         margin-left: 0; 
@@ -4390,7 +4390,7 @@ body > div > div.hero > div.hero__left > form > div {
   body > main > section > section.section--sell > div > div.sell__left > div.owner__info.seller__info > div > div > span.carousel-card__owner-name {
     margin-bottom: -1rem;
   }
-  }
+  } */
 
 @media (max-width: 1100px) {
     .sell__container {
@@ -4398,6 +4398,21 @@ body > div > div.hero > div.hero__left > form > div {
         /* transform: scale(0.8); */
         /* padding: 0 20px 0 60px; */
     }
+
+    .collage {
+      transform: scale(0.9);
+      min-width: 475px !important;
+    }
+
+    .collage img,
+    .small-images img {
+      max-width: 100%;
+      height: auto;
+    }
+
+
+
+
 
     .sign_section {
       gap: 24px;
@@ -4491,6 +4506,11 @@ body > div > div.hero > div.hero__left > form > div {
     font-size: 16px;
   }
 
+      .small-images {
+
+      right: 5%;
+    }
+
   .article-title.large {
     font-size: 18px;
   }
@@ -4533,7 +4553,7 @@ body > div > div.hero > div.hero__left > form > div {
     } */
 
     .articles__container {
-      /* gap: 0.5rem; */
+      max-width: 920px !important;
     }
 
     .feature {
@@ -4544,12 +4564,30 @@ body > div > div.hero > div.hero__left > form > div {
       gap: 50px;
     }
 
-    .sell__right {
-      transform: scale(0.85);
-
+    .seller__button {
+      transform: scale(0.8);
+      margin-left: -150px;
     }
+
+    body > main > section > section.wrapper--1 > section > div > div.sell__left > div.owner__info.seller__info > div > div > span.carousel-card__owner-name {
+      font-size: 14px;
+    }
+
+    body > main > section > section.wrapper--1 > section > div > div.sell__left > div.owner__info.seller__info > div > div > span.carousel-card__owner-location {
+      font-size: 12px;
+    }
+
+    .house__description {
+      max-width: 400px !important;
+    }
+
     .collage {
       margin-left: 0 !important;
+    }
+
+    .sell__right {
+      max-width: 450px;
+      margin-left: 0;
     }
 
 /* 
@@ -4581,9 +4619,24 @@ body > div > div.hero > div.hero__left > form > div {
     }
 }
 
+@media (max-width: 980px) {
+  .big-image {
+    transform: scale(0.95);
+  }
+
+}
+
 @media (max-width: 950px) {
   .articles__left {
     gap: 60px;
+  }
+
+  .big-image {
+    transform: scale(0.925);
+  }
+
+  .collage {
+    padding-right: 20px;
   }
 
 
@@ -4616,25 +4669,10 @@ body > div > div.hero > div.hero__left > form > div {
 }
 
 
-/* @media (max-width: 940px) {
-  .sell__container {
-    gap: 60px;
-    transform: scale(0.7);
-  }
-   */
-/* Scale all images at the same rate */
-/* .big-image {
-  transform: scale(0.7);
-}
+@media (max-width: 940px) {
 
-.small-image {
-  transform: scale(0.7) translateX(330px);
-}
 
-.small-image.medium {
-  transform: scale(0.7);
-}
-} */
+} 
 
 
 @media (max-width: 917px) {
@@ -4644,7 +4682,7 @@ body > div > div.hero > div.hero__left > form > div {
 }
 
 .wrapper--1 {
-  margin: 4rem 124px 4rem 124px ;
+  margin: 4rem 124px 4rem 84px ;
 }
     
 @media (max-width: 900px) {
@@ -5008,7 +5046,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
         gap: 3px
       }
 
-      .recommendation--carousel
+
 }
 
 @media (max-width: 400px) {
