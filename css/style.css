@@ -643,6 +643,19 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
       margin-top: 0 !important;
     }
 
+    .tour {
+      margin-left: 0 !important;
+    }
+    .house__description {
+      margin-left: 0 !important;
+    }
+    .house__details {
+      margin-left: 0 !important;
+    }
+    .owner_sell {
+      margin-left: 0 !important;
+    }
+
 }
 
 
@@ -724,12 +737,12 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
 }
 
 #section--recommendations > span {
-    padding-left: 100px;
+    padding-left: 84px;
 }
 
 
 .feature {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   font-size: 2rem;
   color: #1B1C57;
   font-weight: 600;
@@ -887,7 +900,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
-
+  gap: 32px !important;
   width: 2416px;
   min-width: 100%;
   min-height: 480px;
@@ -945,7 +958,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
   border: none !important;
   height: fit-content;
   padding-bottom: 0;
-   padding: 15px;
+   padding: 15px 0 15px 0;
 }
 
 
@@ -2686,7 +2699,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
   }
 
   .reco {
-    padding-left: 5px;
+    /* padding-left: 5px; */
   }
 
 
@@ -2805,9 +2818,9 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
     padding-left: 40px !important;
   }
 
-      #section--recommendations > span {
+      /* #section--recommendations > span {
     padding-left: 20px !important;
-      }
+      } */
 
   .header {
     margin-bottom: 100px;
@@ -4070,7 +4083,7 @@ body > div > div.hero > div.hero__left > form > div {
         gap: 0px;
     } */
      .wrapper--1 {
-      margin: 4rem 60px 4rem 40px !important;
+      margin: 4rem 60px 4rem 24px !important;
      }
 
     /* Scale all images at the same rate */
@@ -4146,7 +4159,7 @@ body > div > div.hero > div.hero__left > form > div {
       margin-right: 60px;
     }
     #section--recommendations > span {
-      padding-left: 40px;
+      padding-left: 20px;
     }
     .types {
       margin-left: 65px;
@@ -4536,7 +4549,11 @@ body > div > div.hero > div.hero__left > form > div {
     padding-left: 40px;
   }
   #section--recommendations > span {
-    padding-left: 20px;
+    padding-left: 40px;
+  }
+
+  .rectangle {
+    display: none;
   }
 
   .container--2 {
@@ -4601,6 +4618,11 @@ body > div > div.hero > div.hero__left > form > div {
       right: 16%;
     }
 
+.sell__left {
+  max-width: 400px;
+}
+
+
     /* Scale all images at the same rate */
     /* .big-image {
       transform: scale(0.75);
@@ -4617,11 +4639,18 @@ body > div > div.hero > div.hero__left > form > div {
     .partnerships {
       gap: 14px;
     }
+    .sell__left {
+      padding-left: 5px;
+    }
 }
 
 @media (max-width: 980px) {
   .big-image {
-    transform: scale(0.95);
+    transform: scale(0.925);
+  }
+
+    .collage {
+    transform: scale(0.9);
   }
 
 }
@@ -4631,13 +4660,11 @@ body > div > div.hero > div.hero__left > form > div {
     gap: 60px;
   }
 
-  /* .big-image {
-    transform: scale(0.925);
-  } */
-
-  .collage {
-    padding-right: 10px;
+  .big-image {
+    transform: scale(0.9);
   }
+
+
 
 
 
@@ -4678,13 +4705,19 @@ body > div > div.hero > div.hero__left > form > div {
 
 @media (max-width: 930px) {
  .collage {
-    padding-right: 20px;
+    padding-right: 25px;
   }
 }
 
 @media (max-width: 917px) {
   .types {
     margin-left: 40px;
+  }
+  .sell__left {
+    max-width: 395px;
+  }
+  .collage {
+    transform: scale(0.8);
   }
 }
 
@@ -4704,8 +4737,18 @@ body > div > div.hero > div.hero__left > form > div {
         margin: 80px 0;
     }
 
+    
+
     .partnerships {
       gap: 32px !important;
+    }
+
+    .sell {
+      margin-left: -100px ;
+    }
+
+    .tour {
+      margin-left: -100px !important;
     }
     
     #rec_carousel {
@@ -4735,21 +4778,97 @@ body > div > div.hero > div.hero__left > form > div {
 
     .tour {
       font-size: 28px;
-            margin-left: 40px;
+      margin-left: 40px;
+      padding-bottom: 50px;
     }
 
     .seller__button {
       margin-left: -100px;
     }
 
-    .small-images {
-      right: 0;
+    .sell__container {
+      gap: 200px;
     }
 
-    .sell__right {
-      transform: scale(1);
-      transform: translateX(-5%);
+    .house__description,
+    .house__details,
+    .seller__info {
+
+      transform: scale(1.1);
+      padding-left: 40px;
     }
+    .house__description {
+      margin-left: -5px !important;
+    }
+
+    .sell__container {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bedrooms, .bathrooms, .carports, .floors {
+      padding: 0;
+    }
+
+
+    .sell__right {
+      transform: scale(1.3);
+    }
+
+.big-image {
+    /* margin-top: 50px; */
+    display: block !important;
+    position: absolute !important;
+    max-height: 416px !important;
+    max-width: 478px !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 0 !important;
+}
+
+.small-images {
+    position: absolute !important;
+    /* right: 50%; */
+    bottom: 0px !important;
+    transform: translateX(-6.5%) !important;
+    display: flex !important;
+    gap: 12px !important;
+    width: 100% !important;
+    align-items: flex-end !important;
+}
+
+.small-image {
+    /* width: 100%;
+    height: 100%; */
+    position: absolute !important;
+    /* object-fit: cover; */
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transform: translateX(33px) !important;
+}
+
+.small2 {
+    margin-left: -4px !important;
+}
+
+.small1,
+.small2 {
+    width: 96px !important;
+    height: 80px !important;
+    transform: translateX(330px) !important;
+}
+
+.small-image.medium {
+    /* margin-left: -150px; */
+    position: absolute !important;
+    width: 296px !important;
+    height: 168px !important;
+    /* width: 100%;
+    height: 100%; */
+    z-index: 1 !important;
+}
 
       .house__description {
         margin-left: 40px; 
