@@ -3969,6 +3969,10 @@ body > div > div.hero > div.hero__left > form > div {
     transform: scale(0.95) !important;
   }
 
+  header.header {
+    padding-top: 20px;
+  }
+
   body > main > section > section.section--sell > div > div.sell__left > span.reco.sell {
     margin-left: 35px;
   }
@@ -4411,7 +4415,7 @@ body > div > div.hero > div.hero__left > form > div {
 @media (max-width: 1070px) {
   .partnerships {
     gap: 20px;
-  }}
+  }
 
 
   .navigation__list {
