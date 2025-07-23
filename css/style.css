@@ -143,7 +143,7 @@ aside h1 {
   justify-content: space-between;
   width: 100%;
   max-width: 100vw;
-  padding-top: 45px;
+  padding-top: 14px !important;
   padding: 0 80px;
   z-index: 10;
   background: transparent;
@@ -3893,8 +3893,15 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .types {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
+  .types__list {
+    gap: 0px;
+  }
+  .types__item{
+    transform: scale(0.875);
+  }
+
   .container--2 {
     margin-right: 0 !important;
   }
@@ -3970,7 +3977,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   header.header {
-    padding-top: 20px;
+    padding-top: 20px !important;
   }
 
   body > main > section > section.section--sell > div > div.sell__left > span.reco.sell {
@@ -4131,6 +4138,7 @@ body > div > div.hero > div.hero__left > form > div {
     }
     .container--2 {
       margin-left: 60px;
+      margin-right: 60px;
     }
     #section--recommendations > span {
       padding-left: 40px;
@@ -4482,6 +4490,7 @@ body > div > div.hero > div.hero__left > form > div {
 
   .container--2 {
     margin-left: 40px;
+    margin-right: 40px;
   }
 
 }
@@ -4614,6 +4623,10 @@ body > div > div.hero > div.hero__left > form > div {
         padding: 80px 20px 0px 40px;
         margin: 80px 0;
     }
+
+    .partnerships {
+      gap: 32px !important;
+    }
     
     #rec_carousel {
         margin-bottom: 80px;
@@ -4621,6 +4634,7 @@ body > div > div.hero > div.hero__left > form > div {
 
     .reviews {
       padding-top: 20px;
+      margin-bottom: 150px;
     }
     .sign_right {
       width: 100%;
