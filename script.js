@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (signUpBtn) {
     signUpBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      const signupSection = document.querySelector('.sign_up');
+      const signupSection = document.querySelector('.sign_section');
       if (signupSection) {
         signupSection.scrollIntoView({ behavior: 'smooth' });
       }

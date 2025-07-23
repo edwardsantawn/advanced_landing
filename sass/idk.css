@@ -1907,7 +1907,7 @@ body > main > section > section.articles > div.articles__container > div.article
    14. SIGN UP SECTION
    ============================================== */
 
-.sign_up {
+.sign_section {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1943,7 +1943,7 @@ body > main > section > section.articles > div.articles__container > div.article
     color: #0C1930;
 }
 
-body > main > section > section.sign_up > div.sign_left > h2 {
+body > main > section > section.sign_section > div.sign_left > h2 {
     font-size: 24px;
     font-weight: 500;
     color: #0C1930;
@@ -2248,7 +2248,7 @@ input#consent:checked + label[for="consent"]::before {
 
 
 
-   body > main > section > section.sign_up > div.sign_left > h4.sign_body.sign5 {
+   body > main > section > section.sign_section > div.sign_left > h4.sign_body.sign5 {
        margin-bottom: 0;
    }
 
@@ -2256,7 +2256,7 @@ input#consent:checked + label[for="consent"]::before {
     text-align: center;
 }
 
-body > main > section > section.sign_up > div.sign_left > img.sign.sign6 {
+body > main > section > section.sign_section > div.sign_left > img.sign.sign6 {
     width: 261px;
     height: 206px;
 }
@@ -2676,7 +2676,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
         font-size: 14px;
     }
 
-    .sign_up {
+    .sign_section {
         gap: 0;
     }
 
@@ -2846,7 +2846,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
         transform: scale(0.75);
     }
 
-    .sign_up {
+    .sign_section {
         flex-direction: column;
     }
 
@@ -2934,7 +2934,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
         width: 56px;
     }
 
-    .sign_up .sign_form .form_group {
+    .sign_section .sign_form .form_group {
         margin-left: 0;
     }
 
@@ -2999,7 +2999,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 }
 
 @media (max-width: 800px) {
-    .sign_up {
+    .sign_section {
         transform: scale(0.8);
     }
 
@@ -3568,7 +3568,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
         height: 28px;
     }
 
-    .sign_up {
+    .sign_section {
         flex-direction: column;
         margin: 0;
         background: transparent;
@@ -3660,9 +3660,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
     .small-image.medium {
         transform: scale(0.9);
     }
-    .hero__left {
-        padding: 182px 46px 100px 60px;
-    }
+
 }
 
 @media (max-width: 1200px) {
@@ -3798,7 +3796,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
         width: 100%;
     }
 
-    .sign_up {
+    .sign_section {
         gap: 2rem;
     }
 
@@ -3829,7 +3827,7 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
         padding: 0 20px;
         gap: 20px;
     }
-    .sign_up {
+    .sign_section {
         margin-bottom: 0px;
     }
 
