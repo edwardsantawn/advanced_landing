@@ -17,6 +17,30 @@ html {
   overflow-x: hidden;
 }
 
+.hidden {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.hidden1 {
+    color: #F59E0B;
+  /* margin-left: 17px; */
+
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.hidden2 {
+    /* margin-left: 20px; */
+  font-size: 22px;
+  color: #1B1C57;
+  font-weight: 600;
+}
+
+
 body {
   font-family: 'Lexend', sans-serif;
   margin: 0;
@@ -624,7 +648,7 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
     padding: 0 40px !important;
   }
   .subscribe {
-    padding: 0 40px !important;
+    padding: 0 40px ;
   }
   .sign_section {
     padding-left: 40px !important;
@@ -893,6 +917,29 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
   display: none;
 }
 
+#rec-carousel-row {
+  gap: 32px !important;
+}
+
+
+.sell__container,
+.section--sell {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.wrapper--1 {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding-top: 100px !important;
+}
+
+.seller__button {
+  margin-left: -140px !important;
+}
+
 .carousel-row {
   display: flex;
   flex-direction: row;
@@ -900,7 +947,6 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: nowrap;
-  gap: 32px !important;
   width: 2416px;
   min-width: 100%;
   min-height: 480px;
@@ -1060,8 +1106,8 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
 
 .section--sell {
 
-    margin-top: 120px;
-    margin-bottom: 113px;
+    /* margin-top: 120px !important;
+    margin-bottom: 113px !important; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1253,7 +1299,7 @@ body > main > section > section.section--sell > div > div.sell__left > div.owner
     max-height: 459px;
     /* margin: 0 auto; */
     /* transform: scale(1.175); */
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: flex-end;
 }
@@ -1333,8 +1379,9 @@ body > main > section > section.section--sell > div > div.sell__left > div.owner
 .reviews {
   position: relative;
   background: transparent;
-  height: 812px;
+  height: 682px;
   margin-top: 150px;
+  margin-bottom: 109px;
   padding: 0;
   z-index: 1;
 }
@@ -1534,7 +1581,7 @@ body > main > section > section.reviews > div.reviews__heading > span.reco {
 .articles {
   position: relative;
   background: transparent;
-  padding: 0 124px;
+  padding: 109px 124px 0 124px;
   z-index: 1;
   height: 812px;
   /* margin-bottom: 200px; */
@@ -1877,7 +1924,7 @@ body > main > section > section.articles > div.articles__container > div.article
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  padding: 120px 124px 120px 124px ;
+  padding: 0 124px 120px 124px ;
   background: transparent;
   box-shadow: none;
   gap: 32px;
@@ -2486,6 +2533,10 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
 
   .recommendation--carousel {
     height: 70%;
+  }
+
+  body > main > section > section.reviews > div.recommendation--carousel {
+    height: 100% !important;
   }
 
 
@@ -3160,12 +3211,39 @@ body > div > div.hero > div.hero__left > form > div {
 
   }
 
+  .hidden {
+    justify-content: center;
+    text-align: center !important;
+  }
+
+  .hidden1 {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .reco {
+    margin-bottom: 5px;
+  }
+
+  .wrapper--1 {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  #section--recommendations > span {
+    padding-left: 0px !important;
+  }
+
   #rec_carousel {
     margin-bottom: 0 !important;
   }
 
   .wrapper--1 {
     margin-top: 0 !important;
+  }
+
+  .section--sell {
+    min-width: 350px !important;
   }
 
   body > main > section > section.wrapper--1 > section > div > div.sell__left > span.reco.sell {
@@ -3201,11 +3279,6 @@ body > div > div.hero > div.hero__left > form > div {
 
 
 
-  .subscribe {
-    margin-top: -140px !important;
-    margin-bottom: -40px !important;
-    padding: 0 20px 40px 20px !important;
-  }
 
   .types__list {
     gap: 0;
@@ -3280,9 +3353,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
 
-  .reviews__carousel-dots {
-    opacity: 0;
-  }
+
 
 
   .reviews__heading {
@@ -3856,9 +3927,9 @@ body > div > div.hero > div.hero__left > form > div {
     gap:0;
   }
 
-  .sell__container {
+  /* .sell__container {
     margin: 0 !important;
-  }
+  } */
 
   .reviews {
     margin-top: 100px !important;
@@ -3887,7 +3958,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
       #section--recommendations > span {
-        padding-left: 20px !important;
+        /* padding-left: 20px !important; */
         padding-bottom: 10px;
       }
 
@@ -3921,24 +3992,24 @@ body > div > div.hero > div.hero__left > form > div {
     margin-right: 0 !important;
   }
 
-  .sell__right {
+  /* .sell__right {
     display: none;
-  }
-
+  } */
+/* 
   .section--sell {
     padding-top: 0 !important;
     margin-top: 0 !important;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
-  }
-  .sell__left {
+  } */
+  /* .sell__left {
     transform: scale(1.1) !important;
   }
 
   .sell__container {
     margin: 40px 0;
     gap: 0;
-  }
+  } */
   footer.footer {
     flex-direction: column;
     align-items: center;
@@ -3991,6 +4062,12 @@ body > div > div.hero > div.hero__left > form > div {
     transform: scale(0.95) !important;
   }
 
+  .subscribe {
+            margin-top: -80px !important;
+        padding-top: 0 !important;
+        margin-bottom: 40px !important;
+  }
+
   header.header {
     padding-top: 20px !important;
   }
@@ -4003,10 +4080,45 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .reviews {
-    margin-top: 0 !important;
+    margin-top: 200px !important;
+  }
+
+  .sell__right {
+    max-width: 85% !important;
+  }
+
+  .sell__left,
+  .amenities {
+    min-width: 100% !important;
+  }
+
+  /* .bathrooms {
+    justify-content: flex-end;
+  }
+
+  .floors {
+    justify-content: flex-end;
+  } */
+
+
+  .amenities span {
+    max-width: 147.5px;
   }
 
 
+}
+
+@media (max-width: 530px) {
+  .big-image{
+    right: 15%;
+  }
+
+  .small-image {
+    right: 15%;
+  }
+  .small-image.medium {
+    right: 20%;
+  }
 }
 
 @media (max-width: 455px) {
@@ -4219,6 +4331,9 @@ body > div > div.hero > div.hero__left > form > div {
         /* transform: scale(0.85); */
     }
 
+      .reviews__carousel-dots {
+    opacity: 0;
+  }
     .collage {
       margin-left: 5% !important;
     }
@@ -4493,7 +4608,7 @@ body > div > div.hero > div.hero__left > form > div {
 
 @media (max-width: 1050px) {
   .sign_section {
-    padding: 120px 40px 120px 40px !important;
+    padding: 0 40px 120px 40px !important;
   }
 }
 
@@ -4639,9 +4754,7 @@ body > div > div.hero > div.hero__left > form > div {
     .partnerships {
       gap: 14px;
     }
-    .sell__left {
-      padding-left: 5px;
-    }
+
 }
 
 @media (max-width: 980px) {
@@ -4728,13 +4841,28 @@ body > div > div.hero > div.hero__left > form > div {
 @media (max-width: 900px) {
     .sell__container {
         transform: none; /* Remove scaling */
-        justify-content: center;
-        gap: 100px;
-        flex-direction: column;
-        align-items: center;
-        width: 900px;
-        padding: 80px 20px 0px 40px;
-        margin: 80px 0;
+        justify-content: space-between;
+        /* gap: 100px; */
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        /* padding: 80px 20px 0px 40px !important;
+        margin: 80px 0 0 0 !important; */
+    }
+
+    .tour,
+    .sell {
+      display: none;
+    }
+
+    .hidden {
+      opacity: 1 !important;
+      gap: 6px;
+      padding-bottom: 16px;
+    }
+
+    .bedrooms, .bathrooms, .carports, .floors  {
+      padding: 0;
     }
 
     
@@ -4743,14 +4871,10 @@ body > div > div.hero > div.hero__left > form > div {
       gap: 32px !important;
     }
 
-    .sell {
-      margin-left: -100px ;
+    .tour {
+      justify-content: flex-start;
     }
 
-    .tour {
-      margin-left: -100px !important;
-    }
-    
     #rec_carousel {
         margin-bottom: 80px;
     }
@@ -4767,23 +4891,24 @@ body > div > div.hero > div.hero__left > form > div {
       gap: 50px !important;
     }
 
-    .section--sell {
-        padding: 6rem 0 12rem 0;
-    }
+    /* .section--sell {
+        padding: 6rem 0 12rem 0 !important;
+    } */
 
     .sell__left {
-      max-width: 524px;
-      transform: scale(1.15);
+      margin: 0;
     }
+
+
 
     .tour {
       font-size: 28px;
-      margin-left: 40px;
+      /* margin-left: 40px; */
       padding-bottom: 50px;
     }
 
-    .seller__button {
-      margin-left: -100px;
+    /* .seller__button {
+      margin-left: 0px !important;
     }
 
     .sell__container {
@@ -4791,16 +4916,40 @@ body > div > div.hero > div.hero__left > form > div {
     }
 
     .house__description,
-    .house__details,
-    .seller__info {
+    .house__details{
 
       transform: scale(1.1);
-      padding-left: 40px;
+            min-width: 87.5%;
+  
     }
     .house__description {
       margin-left: -5px !important;
+      max-width: 100% !important;
+    } */
+/* 
+    .owner_sell {
+      gap: 0;
+      justify-content: space-between;
+    } */
+
+    /* .seller__info {
+      transform: scale(1.1);
+      min-width: 87.5%;
     }
 
+    .amenities {
+      min-width: 100%;
+      gap: 0;
+      justify-content: space-between;
+    } */
+
+    /* body > main > section > section.wrapper--1 > section > div > div.sell__left > div.owner__info.seller__info > div > div {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+    } */
+/* 
     .sell__container {
       justify-content: center;
       align-items: center;
@@ -4813,7 +4962,7 @@ body > div > div.hero > div.hero__left > form > div {
 
     .sell__right {
       transform: scale(1.3);
-    }
+    } */
 
 .big-image {
     /* margin-top: 50px; */
@@ -4822,6 +4971,7 @@ body > div > div.hero > div.hero__left > form > div {
     max-height: 416px !important;
     max-width: 478px !important;
     width: 100% !important;
+    bottom: 40%;
     height: 100% !important;
     margin-left: 0 !important;
 }
@@ -4829,7 +4979,7 @@ body > div > div.hero > div.hero__left > form > div {
 .small-images {
     position: absolute !important;
     /* right: 50%; */
-    bottom: 0px !important;
+    bottom: 35% !important;
     transform: translateX(-6.5%) !important;
     display: flex !important;
     gap: 12px !important;
@@ -4846,7 +4996,7 @@ body > div > div.hero > div.hero__left > form > div {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
     position: relative !important;
     z-index: 1 !important;
-    transform: translateX(33px) !important;
+    transform: translateX(60px) !important;
 }
 
 .small2 {
@@ -4857,7 +5007,7 @@ body > div > div.hero > div.hero__left > form > div {
 .small2 {
     width: 96px !important;
     height: 80px !important;
-    transform: translateX(330px) !important;
+    transform: translateX(365px) !important;
 }
 
 .small-image.medium {
@@ -4911,6 +5061,30 @@ body > div > div.hero > div.hero__left > form > div {
     .small-image.medium {
         transform: none;
     }
+
+    .sell__right {
+      transform: scale(0.9);
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      height: auto !important;
+      max-width: 395px;
+      /* max-height: 404px; */
+      padding: 20px 0 !important;
+    }
+
+        .collage {
+        margin: 0 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transform: scale(0.7) !important;
+        position: relative !important;
+        width: fit-content !important;
+
+    }
 }
 
 @media (max-width: 965px) {
@@ -4925,6 +5099,11 @@ body > div > div.hero > div.hero__left > form > div {
     }
 }
 
+@media (max-width: 850px) {
+      .collage {
+      right: 5%;
+    }
+}
 
 @media (max-width: 840px) {
     .articles__right-img {
@@ -4932,11 +5111,43 @@ body > div > div.hero > div.hero__left > form > div {
     }
 }
 
+@media (max-width: 830px) {
+    .collage {
+        transform: scale(0.6) !important;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media (max-width: 810px) {
+    .collage {
+      right: 7.5%;
+    }
+}
+
 @media (max-width: 800px) {
-    .sell__container {
+    /* .sell__container {
         width: 100%;
         padding: 0 20px;
-        /* gap: 20px; */
+        gap: 20px;
+    } */
+
+    body > main > section > section.reviews > div.recommendation--carousel {
+      height: 150% !important;
+    }
+
+    .articles {
+      margin-top: 300px !important;
+    }
+
+    .hidden {
+      padding-bottom: 20px;
+    }
+
+    .sell__left {
+      max-width: 375px;
     }
 
     #rec-carousel-row {
@@ -4956,15 +5167,16 @@ body > div > div.hero > div.hero__left > form > div {
     }
 
     .subscribe {
-      /* margin-top: 100px !important; */
-      padding-top: 80px;
+      margin-top: 100px ;
+      padding-top: 80px ;
+      margin-bottom: 40px ;
     }
 
     .articles__container {
       margin-bottom: 100px;
     }
 
-    .big-image {
+    /* .big-image {
         width: 100%;
         height: auto;
         transform: none;
@@ -4974,7 +5186,7 @@ body > div > div.hero > div.hero__left > form > div {
 
         height: auto;
 
-    }
+    } */
 
     .collage {
         /* transform: scale(0.7); */
@@ -4991,11 +5203,72 @@ body > div > div.hero > div.hero__left > form > div {
     }
 }
 
+@media (max-width: 780px) {
+    .collage {
+      right: 10%;
+    }
+}
+
+@media (max-width: 770px) {
+    .collage {
+      right: 12.5%;
+    }
+}
+
+@media (max-width: 760px) {
+    .sell__container {
+      flex-direction: column;
+      align-items: flex-end;
+      padding-top: 25px !important;
+      margin-left: -10px;
+    }
+
+    .sell__left {
+      transform: scale(1.2);
+      max-width: 90% !important;
+    }
+
+    .amenities {
+      gap: 0px;
+      justify-content: space-between;
+    }
+
+    .bedrooms, .bathrooms, .carports, .floors {
+      gap: 14px;
+    }
+
+    .house__description,
+    .house__details {
+      max-width: 100% !important;
+    }
+
+    .sell__container {
+      gap: 130px;
+    }
+
+    .sell__right {
+      max-width: 80%;
+    }
+
+    .collage {
+      transform: scale(0.75) !important;
+    }
+
+    .wrapper--1 {
+      padding-top: 0 !important; 
+    }
+
+    .reviews {
+      padding-top: 180px;
+    }
+} 
+
 @media (max-width: 747px) {
     .article-meta {
         /* transform: scale(0.95); */
     }
 }
+
 
 @media (max-width: 600px) {
     .sell__left {
@@ -5019,6 +5292,14 @@ body > div > div.hero > div.hero__left > form > div {
 
   .article-meta {
     font-size: 12px;
+  }
+
+  .subscribe__button {
+    display: none;
+  }
+
+  .search__input {
+    text-align: center;
   }
 
     #review-block {
@@ -5054,6 +5335,8 @@ body > div > div.hero > div.hero__left > form > div {
     font-size: 12px;
   }
 }
+
+
  
 @media (max-width: 455px) {
     .tour {
@@ -5102,16 +5385,24 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
 
     .seller__button {
         transform: scale(0.75);
-        margin-left: -120px;
+        margin-left: -150px !important;
     }
+
+    .house__description {
+      /* max-width: 350px !important; */
+      /* transform: scale(0.9 )!important; */
+    }
+
     .collage {
         transform: scale(0.6);
         /* width: 455px; */
         margin: 0;
     }
     .section--sell {
-        height: auto;
+        height: 100%;
         padding-bottom: 100px;
+        width: 100% !important;
+        padding-left: 20px !important;
     }
     .small-images {
         bottom: 75px;
