@@ -648,7 +648,7 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
     padding: 109px 40px 100px 40px !important;
   }
   .subscribe {
-    padding: 0 40px ;
+    padding: 0 40px !important;
   }
   .sign_section {
     padding-left: 40px !important;
@@ -1122,7 +1122,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
     /* gap: 180px; */
     height: 459px;
     width: 1440px;
-    /* padding: 0  102px 0 84px; */
+    padding: 0  124px 0 84px !important;
     z-index: 2;
 
 }
@@ -3224,10 +3224,6 @@ body > div > div.hero > div.hero__left > form > div {
     margin-bottom: 5px;
   }
 
-  .wrapper--1 {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
-  }
 
   #section--recommendations > span {
     padding-left: 0px !important;
@@ -3238,7 +3234,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .wrapper--1 {
-    margin-top: 0 !important;
+    margin-top: 0 ;
   }
 
   .section--sell {
@@ -3579,7 +3575,7 @@ body > div > div.hero > div.hero__left > form > div {
 
   .recommendation--carousel {
     flex-direction: column;
-    padding: 0 1rem;
+    padding: 0 20px;
     align-items: center;
     overflow-x: visible;
     overflow-y: visible;
@@ -3629,7 +3625,7 @@ body > div > div.hero > div.hero__left > form > div {
     -webkit-backdrop-filter: blur(2px);
     width: 100%;
     min-width: 0;
-    padding: 1rem;
+    padding: 15px 20px 15px 20px !important;
     box-sizing: border-box;
     margin: 0 auto 1.2rem auto;
   }
@@ -3870,8 +3866,7 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .sign_section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding: 80px 20px 0 20px !important;
   }
 
   .form_group.checkbox {
@@ -4061,14 +4056,29 @@ body > div > div.hero > div.hero__left > form > div {
     transform: scale(0.95) !important;
   }
 
+  .sign_section {
+    padding-bottom: 40px !important;
+  }
+
+  .wrapper--1 {
+    margin-left: 20px !important;
+    margin-right: 20px !important;   
+  }
+
+  .sell__container {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
+
   .articles {
     margin-top: 0 !important;
   }
 
   .subscribe {
-            margin-top: -80px !important;
-        padding-top: 0 !important;
+            margin-top: -180px !important;
+        padding: 0 20px 0 20px!important;
         margin-bottom: 40px !important;
+
   }
 
   header.header {
@@ -4083,7 +4093,9 @@ body > div > div.hero > div.hero__left > form > div {
   }
 
   .reviews {
-    margin-top: 200px !important;
+    margin-top: 240px !important;
+    margin-bottom: 40px !important;
+    padding-top: 60px !important;
   }
 
   .sell__right {
@@ -4197,8 +4209,12 @@ body > div > div.hero > div.hero__left > form > div {
         transform: scale(0.9);
         gap: 0px;
     } */
+
+    .sell__container {
+      padding: 0 !important;
+    }
      .wrapper--1 {
-      margin: 4rem 60px 4rem 24px !important;
+      margin:  0 60px 0 20px!important;
      }
 
     /* Scale all images at the same rate */
@@ -4611,7 +4627,7 @@ body > div > div.hero > div.hero__left > form > div {
 
 @media (max-width: 1050px) {
   .sign_section {
-    padding: 0 40px 120px 40px !important;
+    /* padding: 0 40px 0 40px !important; */
   }
 }
 
@@ -4630,7 +4646,7 @@ body > div > div.hero > div.hero__left > form > div {
     padding: 0 20px 0 40px;
   } */
   .wrapper--1 {
-    margin: 4rem 40px 4rem 40px !important;
+    margin: 0 40px 4rem 40px !important; ;
   }
 
   .article-title {
@@ -4838,9 +4854,9 @@ body > div > div.hero > div.hero__left > form > div {
   }
 }
 
-.wrapper--1 {
+/* .wrapper--1 {
   margin: 0 124px 0 84px ;
-}
+} */
     
 @media (max-width: 900px) {
     .sell__container {
@@ -5227,10 +5243,20 @@ body > div > div.hero > div.hero__left > form > div {
       margin-left: -10px;
     }
 
+    .seller__button {
+      margin-left: -150px !important;
+    }
+
     .sell__left {
       transform: scale(1.2);
       max-width: 90% !important;
     }
+
+    .owner_sell {
+      max-width: 90% !important;
+      justify-content: space-between;
+    }
+   
 
     .amenities {
       gap: 0px;
@@ -5260,12 +5286,20 @@ body > div > div.hero > div.hero__left > form > div {
 
     .wrapper--1 {
       padding-top: 0 !important; 
-      margin: 4rem 40px 300px 40px !important;
+      margin: -20px 40px 300px 40px ;
     }
 
     .reviews {
-      margin-top: 280px;
+      margin-top: 280px !important;
     }
+
+    .articles {
+      padding: 20px 40px 100px 40px !important;
+    }
+      .subscribe {
+        margin-top: 0;
+        padding-top: 0;
+      }
 } 
 
 @media (max-width: 747px) {
@@ -5285,6 +5319,20 @@ body > div > div.hero > div.hero__left > form > div {
 @media (max-width: 500px) {
   .search__button {
     display: none;
+  }
+
+  .sell__right {
+    display: none !important;
+  }
+
+  .reviews{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+
+  .wrapper--1 {
+    margin-bottom: 0 !important;
   }
 
   /* .rectangle {
@@ -5373,7 +5421,7 @@ body > div > div.hero > div.hero__left > form > div {
 body > main > section > section.subscribe > div > div.subscribe__content > span{
       /* font-size: 24px !important; */
     }
-    .house__description {
+    /* .house__description {
         margin-left: 0;
         max-width: 350px;
     }
@@ -5391,7 +5439,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
     .seller__button {
         transform: scale(0.75);
         margin-left: -150px !important;
-    }
+    } */
 
     .house__description {
       /* max-width: 350px !important; */
@@ -5403,12 +5451,12 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
         /* width: 455px; */
         margin: 0;
     }
-    .section--sell {
+    /* .section--sell {
         height: 100%;
         padding-bottom: 100px;
         width: 100% !important;
         padding-left: 20px !important;
-    }
+    } */
     .small-images {
         bottom: 75px;
     }
@@ -5419,6 +5467,10 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
       #review-block {
     max-width: 400px;
   }
+  .seller__button {
+    display: none;;
+  }
+
 }
 
 @media (max-width: 380px) {
@@ -5442,6 +5494,8 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
   .sell__container {
     padding-left: 0 !important;
   }
+
+
 
   .types__list {
     transform: scale(0.85);
@@ -5492,6 +5546,13 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
     .amenities {
         gap: 0;
     }
+          .section--sell {
+    margin-left: -15px !important;
+  }
+
+  .hidden {
+    padding-bottom: 0;
+  }
 
 }
 
@@ -5499,4 +5560,47 @@ body > main > section > section.subscribe > div > div.subscribe__content > span{
     .small-images {
         bottom: 90px;
     }
+    .sell__container {
+      max-width: 300px;
+      /* margin-right: 60px !important;  */
+    }
+
+    .section--sell {
+    margin-left: -20px !important;
   }
+  .house__description {
+    font-size: 14px;
+  }
+  .amenities {
+    font-size: 12px;
+    gap: 0;
+
+  }
+
+  .amenities span {
+    max-width: 130px;
+  }
+
+  }
+
+  @media (max-width: 360px) {
+
+    .section--sell {
+    margin-left: -35px !important;
+  }
+
+  }
+
+@media (max-width: 340px) {
+
+
+    .house__description,
+    .house__details {
+      max-width: 250px !important;
+    }
+
+    .amenities img {
+      display: none;
+    }
+  }
+  
