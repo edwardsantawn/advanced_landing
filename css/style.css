@@ -135,12 +135,11 @@ aside h1 {
   height: 40px;
   min-height: 55px;
   justify-content: space-between;
-  margin: 0 0 0 124px; /* Reduced from 124px to 32px */
+  margin: 0 124px 19px 124px; /* Reduced from 124px to 32px */
   /* flex-wrap: wrap; */
   box-sizing: border-box;
-  /* gap: 37px; */
-  margin-right: 124px;
-  margin-bottom: 19px;
+  /* margin-right: 124px;
+  margin-bottom: 19px; */
 }
 
 #section--recommendations > div.container--2 > span {
@@ -155,6 +154,18 @@ aside h1 {
 
 .types__list {
 
+}
+
+#section--recommendations > div.container--2 > div.types > ul > li:nth-child(1) > button {
+  width: 150px;
+}
+
+#section--recommendations > div.container--2 > div.types > ul > li:nth-child(2) > button {
+  width: 112px;
+}
+
+#section--recommendations > div.container--2 > div.types > ul > li:nth-child(3) > button {
+  width: 156px;
 }
 
 /* ==============================================
@@ -689,11 +700,15 @@ body > div > div.hero > div.hero__left > div > img:nth-child(1) {
     /* padding-bottom: 1.25rem; */
   }
 
-  .types {
+  .types__list {
+    width: 80%;
+  }
+
+  /* .types {
 
     margin-right: 135px;
     margin-left: 135px;
-  }
+  } */
 
 
   .partnerships {
@@ -786,8 +801,11 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
   flex-direction: row;
   list-style: none;
   text-decoration: none;
-  gap: 1rem;
+  /* gap: 27px; */
+  /* width: 100%; */
+  width: 472px;
   padding-left: 0;
+  justify-content: space-between;
   margin-left: 0px;
 }
 
@@ -937,7 +955,7 @@ body > main > section > section.subscribe > div > div.subscribe__content > span 
 }
 
 .seller__button {
-  margin-left: -140px !important;
+  /* margin-left: -140px !important; */
 }
 
 .carousel-row {
@@ -2864,6 +2882,10 @@ body > main > section > footer > div.footer--1.footer-quarter > span.header__log
     gap: 0;
   }
 
+  .types{ 
+    width: 375px ;
+  }
+
   #rec_carousel {
     padding-left: 40px !important;
   }
@@ -3972,6 +3994,7 @@ body > div > div.hero > div.hero__left > form > div {
     display: none;
   }
 
+
   .types {
     margin-right: 0 !important;
   }
@@ -3982,9 +4005,7 @@ body > div > div.hero > div.hero__left > form > div {
     transform: scale(0.875);
   }
 
-  .container--2 {
-    margin-right: 0 !important;
-  }
+
 
   /* .sell__right {
     display: none;
@@ -4047,6 +4068,18 @@ body > div > div.hero > div.hero__left > form > div {
 @media (max-width: 747px) {
   .article-meta {
     /* transform: scale(0.95); */
+  }
+}
+
+@media (max-width: 660px) {
+  .types {
+    width: 350px;
+  }
+}
+
+@media (max-width: 630px) {
+  .types {
+    width: 325px;
   }
 }
 
@@ -4292,10 +4325,10 @@ body > div > div.hero > div.hero__left > form > div {
     #section--recommendations > span {
       padding-left: 20px;
     }
-    .types {
+    /* .types {
       margin-left: 65px;
       margin-right: 205px;
-    }
+    } */
     .articles__right {
       margin-right: 0 !important;
     }
@@ -4840,12 +4873,35 @@ body > div > div.hero > div.hero__left > form > div {
  .collage {
     padding-right: 25px;
   }
+
+  #section--recommendations > div.container--2 > div.types > ul > li:nth-child(1) > button {
+  width: 120px;
+}
+
+#section--recommendations > div.container--2 > div.types > ul > li:nth-child(2) > button {
+  width: 90px;
+}
+
+#section--recommendations > div.container--2 > div.types > ul > li:nth-child(3) > button {
+  width: 126px;
+}
+
+.types__list {
+  max-width: 95%;
+  padding-left: 0;
+}
+
+.types {
+  max-width: 400px !important;
+}
+
+ 
 }
 
 @media (max-width: 917px) {
-  .types {
+  /* .types {
     margin-left: 40px;
-  }
+  } */
   .sell__left {
     max-width: 395px;
   }
@@ -5227,6 +5283,10 @@ body > div > div.hero > div.hero__left > form > div {
     .collage {
       right: 10%;
     }
+
+    .types {
+      margin-right: 10px;
+    }
 }
 
 @media (max-width: 770px) {
@@ -5254,7 +5314,7 @@ body > div > div.hero > div.hero__left > form > div {
 
     .owner_sell {
       max-width: 90% !important;
-      justify-content: space-between;
+      /* justify-content: space-between; */
     }
    
 
